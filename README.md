@@ -1,7 +1,5 @@
 # README
 
-------------
-
 Ce dépôt contient le code source de la formation R initiation donnée à l'Insee et en SSM à partir de 2016. Les versions compilées de ces supports sont disponibles à l'adresse [r.slmc.fr](http://r.slmc.fr).
 
 Ces supports ont été réalisés sous [RStudio](https://www.rstudio.com/) avec [R Markdown](https://rmarkdown.rstudio.com/) et [latex](https://www.latex-project.org/). Les données utilisées dans le cadre de ces formations ont été téléchargées depuis les sites : [data.gouv.fr](http://data.gouv.fr), [insee.fr](http://insee.fr), [oecd.org](http://www.oecd.org).
