@@ -1,0 +1,774 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[12pt,ignorenonframetext,]{beamer}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Formation R initiation},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\newif\ifbibliography
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+\centering
+\begin{beamercolorbox}[sep=16pt,center]{part title}
+  \usebeamerfont{part title}\insertpart\par
+\end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+\centering
+\begin{beamercolorbox}[sep=12pt,center]{part title}
+  \usebeamerfont{section title}\insertsection\par
+\end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+\centering
+\begin{beamercolorbox}[sep=8pt,center]{part title}
+  \usebeamerfont{subsection title}\insertsubsection\par
+\end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+% Packages à charger
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{textcomp} 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{booktabs,multirow}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{pgfpages}
+\usepackage{colortbl}
+\usepackage{epstopdf}
+\usepackage{framed}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\usepackage{csquotes}
+
+
+% Définition de couleurs utilisées par la suite
+\definecolor{shadecolor}{RGB}{248,248,248}
+\definecolor{grayInsee}{HTML}{5a5758}
+\definecolor{redInsee}{HTML}{ed1443}
+
+% Personnalisation du thème du beamer
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamercolor{title}{fg=grayInsee}
+\setbeamercolor{section in toc}{fg=redInsee}
+\setbeamercolor{subsection in toc}{fg=grayInsee}
+\setbeamertemplate{frametitle}{%
+	\large \textcolor{grayInsee}{\subsecname}
+	\\ \vspace{0.1cm} \Large \textcolor{redInsee}{\insertframetitle}
+}
+\setbeamercolor{local structure}{fg=redInsee}
+
+% Instruction spécifiques à tikz
+\usetikzlibrary{shapes,arrows,calc, positioning}
+\tikzstyle{input} = [draw, rectangle,rounded corners, text width=2.5cm, fill=green!20, node distance=0.5cm, minimum height=2em, text centered]
+\tikzstyle{output} = [draw, ellipse,fill=red!20, node distance=0.5cm, minimum height=2em, text centered]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=1.5cm, text centered, minimum height=2em, node distance = 0.5cm]
+\tikzstyle{line} = [draw, -latex', shorten >=2pt, shorten <=2pt]
+\tikzset{
+  invisible/.style={opacity=0},
+  visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{%
+    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+  },
+}
+
+% Personnalisation des débuts de partie et de sous-partie
+\AtBeginSection[]
+{\ifnum \thesection>0
+  \begin{frame}
+  \vfill
+  \begin{center}
+  \LARGE
+  \textcolor{grayInsee}{\insertsectionhead}
+  \end{center}
+  \vfill
+  \end{frame}
+\else
+\fi
+\subsection*{\secname}
+}
+\AtBeginSubsection[]{}
+
+% Affichage d'un fond gris derrière les exemples de code
+\ifcsmacro{Shaded}{
+  \renewenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+}
+
+% Page de garde
+\institute{
+	\includegraphics[height = 2.5cm]{Logo_Insee.png} \\ ~ \\ 
+	\normalsize Martin \textsc{Chevalier} (Insee)
+}
+\author{22 et 23 janvier 2018}
+\date{}
+
+% Commande outil pour les exemples, etc.
+\newcommand{\aparte}[2]{
+	{\small\textsf{\textcolor{redInsee}{\textbf{#1}} #2}}
+}
+
+\newcommand{\strong}[1]{\textbf{\textcolor{redInsee}{#1}}}
+
+\newcommand{\link}[1]{\textcolor{redInsee}{\underline{#1}}}
+
+\title{Formation R initiation}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+\hypertarget{formation-r-initiation}{%
+\subsection*{Formation R initiation}\label{formation-r-initiation}}
+\addcontentsline{toc}{subsection}{Formation R initiation}
+
+\begin{frame}{Objectifs et pédagogie}
+\protect\hypertarget{objectifs-et-pedagogie}{}
+
+\strong{Objectifs de la formation}
+
+\begin{enumerate}
+[1.]
+\item
+  \pause Acquérir des points de repères et des réflexes dans
+  l’utilisation du logiciel R;
+\item
+  \pause Savoir travailler de façon autonome sur des données
+  statistiques dans une perspective Insee;
+\item
+  \pause Maîtriser suffisamment les principes fondamentaux du logiciel
+  pour être en mesure de se perfectionner par la suite.
+\end{enumerate}
+
+\bigskip \pause \strong{Principes pédagogiques}
+
+\begin{enumerate}
+[1.]
+\item
+  \pause Pratique permanente et orientée métier;
+\item
+  \pause Autonomie dans l’apprentissage et progression à son rythme;
+\item
+  \pause Accompagnement personnalisé par le formateur.
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}[fragile]{Supports (1) : pages web de la formation}
+\protect\hypertarget{supports-1-pages-web-de-la-formation}{}
+
+Le support principal de la formation est un ensemble de pages web
+accessibles à l’adresse \href{http://r.slmc.fr}{\link{r.slmc.fr}}.
+
+\bigskip \pause Ces pages web contiennent l’ensemble du contenu de la
+formation:
+
+\begin{itemize}
+\tightlist
+\item
+  présentation, explication et illustration des notions avec des
+  exemples de code;
+\item
+  cas pratiques corrigés.
+\end{itemize}
+
+\bigskip \pause \strong{Remarques}
+
+\begin{itemize}
+\tightlist
+\item
+  Ces pages web peuvent être sauvegardées sous forme de fichiers
+  \texttt{.html} et consultées hors connexion;
+\item
+  Les supports figurent dans le répertoire de la formation sur AUS :
+  \texttt{Y:\textbackslash{}Documentation\textbackslash{}R\textbackslash{}R\_initiation\textbackslash{}}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Supports (2) : livret et présentations}
+\protect\hypertarget{supports-2-livret-et-presentations}{}
+
+Le contenu de la formation est également disponible dans un
+\strong{livret imprimé}:
+
+\begin{itemize}
+\tightlist
+\item
+  faciliter l’appropriation des notions;
+\item
+  réduire la fatigue visuelle;
+\item
+  constituer une référence à l’issue de la formation.
+\end{itemize}
+
+\bigskip \pause De \strong{courtes présentations} ponctuent la
+formation:
+
+\begin{itemize}
+\tightlist
+\item
+  rythmer la progression;
+\item
+  présenter les objectifs des modules;
+\item
+  insister sur les notions les plus importantes.
+\end{itemize}
+
+\bigskip \pause \strong{Remarque} Tous les supports de la formation ont
+été produits depuis R avec
+\href{http://rmarkdown.rstudio.com/}{\link{R Markdown}} (\emph{cf.}
+\href{http://t.slmc.fr/perf}{\link{R perfectionnement}}).
+
+\end{frame}
+
+\begin{frame}{Progression}
+\protect\hypertarget{progression}{}
+
+La formation est articulée autour de \textbf{trois modules}:
+
+\begin{enumerate}
+[1.]
+\item
+  \pause \textbf{Prise en main du logiciel}: se repérer dans l’interface
+  et savoir explorer des données;
+\item
+  \pause \textbf{Manipuler les éléments fondamentaux du langage}:
+  acquérir une connaissance solide des briques élémentaires de R;
+\item
+  \pause \textbf{Travailler avec des données statistiques}: articuler
+  les briques du module 2 pour la statistique appliquée.
+\end{enumerate}
+
+\bigskip \pause \strong{Articulation générale}
+
+\begin{itemize}
+\tightlist
+\item
+  \pause Les modules 1 et 3 sont \textbf{orientés métier}: travail sur
+  des données Insee dans une perspective \enquote{chargé d’études}.
+\item
+  \pause Le module 2 est un \textbf{détour nécessaire} pour maîtriser
+  les manipulations effectuées dans le module 3.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Organisation pratique}
+\protect\hypertarget{organisation-pratique}{}
+
+\strong{Travail en autonomie}
+
+\begin{itemize}
+\item
+  \vspace{-0.2cm}
+
+  partie \enquote{cours} à partir du livret;
+\item
+  cas pratiques corrigés sur AUS;
+\item
+  \pause \textbf{vous m'appelez en cas de difficulté}.
+\end{itemize}
+
+\bigskip \pause \strong{Horaires}
+
+\begin{itemize}
+\item
+  \vspace{-0.2cm}
+
+  proposition : 9h30-12h20 puis 13h40-16h30;
+\item
+  pauses : 11h, 15h et quand vous sentez que c’est nécessaire !
+\end{itemize}
+
+\bigskip \pause \strong{Conditions de travail} La formation est
+\textbf{intensive}:
+
+\begin{itemize}
+\item
+  \vspace{-0.2cm}
+
+  prenez le temps de bien paramétrer votre espace de travail (éclairage,
+  siège, etc.) et faites des pauses régulièrement;
+\item
+  n’hésitez pas à m’indiquer tout ce qui peut améliorer votre confort.
+\end{itemize}
+
+\end{frame}
+
+\hypertarget{module-1-prise-en-main-du-logiciel}{%
+\section{Module 1 : Prise en main du
+logiciel}\label{module-1-prise-en-main-du-logiciel}}
+
+\hypertarget{prise-en-main-du-logiciel}{%
+\subsection*{Prise en main du
+logiciel}\label{prise-en-main-du-logiciel}}
+\addcontentsline{toc}{subsection}{Prise en main du logiciel}
+
+\begin{frame}{Objectifs et organisation}
+\protect\hypertarget{objectifs-et-organisation}{}
+
+\strong{Objectifs}
+
+\begin{enumerate}
+[1.]
+\tightlist
+\item
+  Acquérir des points de repère dans l’interface de R;
+\item
+  Mener quelques traitements simples pour observer le fonctionnement du
+  logiciel;
+\item
+  Introduire des problématiques métier: travail sur des données,
+  importation de fichiers de données SAS.
+\end{enumerate}
+
+\bigskip \pause \strong{Organisation}
+
+\begin{enumerate}
+[1.]
+\item
+  Un peu d’histoire et quelques grands principes
+\item
+  Découverte de l’interface
+\item
+  Charger et explorer des données
+\item
+  Importer des données à l’aide de \emph{packages}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}[fragile]{\large Un peu d’histoire et quelques grands
+principes}
+\protect\hypertarget{un-peu-dhistoire-et-quelques-grands-principes}{}
+
+Insister sur les \textbf{spécificités de R}, notamment par rapport à
+SAS:
+
+\begin{itemize}
+\tightlist
+\item
+  R est sensible à la casse;
+\item
+  dans R, les chemins doivent être indiqués avec des \texttt{/} et non
+  des \texttt{\textbackslash{}}.
+\end{itemize}
+
+\bigskip \pause Plus généralement, R s’apparente davantage à un
+\textbf{langage de programmation \enquote{classique}} (Python par
+exemple):
+
+\begin{quote}
+\emph{To understand computations in R, two slogans are helpful:}
+
+\begin{itemize}
+\item
+  \emph{Everything that exists is an object.}
+\item
+  \emph{Everything that happens is a function call.}
+\end{itemize}
+
+\emph{John Chambers}
+\end{quote}
+
+\end{frame}
+
+\begin{frame}{Découverte de l’interface}
+\protect\hypertarget{decouverte-de-linterface}{}
+
+Faire de \textbf{premières manipulations} dans les deux interfaces de R
+disponibles sur AUS:
+
+\begin{itemize}
+\item
+  R \enquote{classique}: programme très dépouillé, essentiellement
+  utilisé en mode \enquote{console};
+\item
+  Rstudio: environnement de développement intégré qui facilite
+  considérablement l’\textbf{écriture de scripts} (colorisation du code,
+  auto-complétion, etc.).
+\end{itemize}
+
+\bigskip \pause Acquérir un \textbf{vocabulaire de base}:
+
+\begin{itemize}
+\tightlist
+\item
+  création d’objets simples et opérations arithmétiques;
+\item
+  affichage et manipulation des objets stockés en mémoire;
+\item
+  utilisation de l’aide intégrée dans le logiciel;
+\item
+  écriture d’une première fonction personnalisée.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Charger et explorer des données}
+\protect\hypertarget{charger-et-explorer-des-donnees}{}
+
+Savoir \textbf{utiliser des données} dans R :
+
+\begin{itemize}
+\tightlist
+\item
+  chargement d’un fichier de données \texttt{.RData};
+\item
+  principales caractéristiques des données : nombre d’observations,
+  affichage des premières lignes, etc.
+\end{itemize}
+
+\bigskip \pause Mener des \textbf{traitements simples} avec R :
+
+\begin{itemize}
+\tightlist
+\item
+  indicateurs statistiques usuels: moyenne d’une variable quantitative,
+  distribution d’une variable qualitative;
+\item
+  ventilation des traitements selon les modalités d’une variable
+  qualitative;
+\item
+  production de graphiques simples.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Importer des données à l’aide de \emph{packages}}
+\protect\hypertarget{importer-des-donnees-a-laide-de-packages}{}
+
+\textbf{Importer des données} qui ne sont pas en format R natif:
+
+\begin{itemize}
+\tightlist
+\item
+  fichiers plats: \texttt{.txt}, \texttt{.csv}, \texttt{.dlm};
+\item
+  fichiers SAS: \texttt{.sas7bdat}.
+\end{itemize}
+
+\bigskip \pause \textbf{Exporter des données} au format R natif.
+
+\bigskip \pause Percevoir l’\textbf{importance des \emph{packages}} dans
+R :
+
+\begin{itemize}
+\tightlist
+\item
+  installation;
+\item
+  chargement pour accéder à de nouvelles fonctions.
+\end{itemize}
+
+\end{frame}
+
+\hypertarget{module-2-manipuler-les-elements-fondamentaux-du-langage}{%
+\section{Module 2 : Manipuler les éléments fondamentaux du
+langage}\label{module-2-manipuler-les-elements-fondamentaux-du-langage}}
+
+\hypertarget{manipuler-les-elements-fondamentaux-du-langage}{%
+\subsection*{Manipuler les éléments fondamentaux du
+langage}\label{manipuler-les-elements-fondamentaux-du-langage}}
+\addcontentsline{toc}{subsection}{Manipuler les éléments fondamentaux du
+langage}
+
+\begin{frame}{Objectifs et organisation}
+\protect\hypertarget{objectifs-et-organisation-1}{}
+
+\strong{Objectifs}
+
+\begin{enumerate}
+[1.]
+\tightlist
+\item
+  Introduire progressivement les briques élémentaires du langage de R;
+\item
+  Connaître leurs propriétés et savoir les manipuler;
+\item
+  Enrichir son vocabulaire de fonctions.
+\end{enumerate}
+
+\bigskip \pause \strong{Organisation}
+
+\begin{enumerate}
+[1.]
+\item
+  Manipuler les vecteurs
+\item
+  Manipuler les matrices
+\item
+  Manipuler les listes
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Manipuler les vecteurs}
+\protect\hypertarget{manipuler-les-vecteurs}{}
+
+Les vecteurs sont les éléments fondamentaux du langage de R. Ils servent
+notamment :
+
+\begin{itemize}
+\tightlist
+\item
+  à coder l’information statistique: les variables d’une table sont des
+  vecteurs;
+\item
+  à modifier le contenu d’une table: créer de nouvelles variables,
+  sélectionner des variables et des observations;
+\item
+  à calculer des indicateurs statistiques: les \emph{inputs} de la
+  plupart des fonctions statistiques sont des vecteurs.
+\end{itemize}
+
+\pause \bigskip \strong{Progression de la partie}
+
+\begin{enumerate}
+[1.]
+\tightlist
+\item
+  Création de vecteurs et sélection d’éléments;
+\item
+  Spécificités des différents types de vecteurs et manipulations;
+\item
+  Compléments : valeurs spéciales, conversion de type
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}[fragile]{Manipuler les matrices}
+\protect\hypertarget{manipuler-les-matrices}{}
+
+Les matrices sont une généralisation directe des vecteurs en deux
+dimensions (ou plus, on parle alors de \texttt{array}).
+
+\pause Cette structure à deux dimensions les rapproche par certains
+égards des tableaux de données statistiques.
+
+\pause \bigskip \strong{Objectif de la partie} Création de matrices et
+sélection d’éléments.
+
+\end{frame}
+
+\begin{frame}{Manipuler les listes}
+\protect\hypertarget{manipuler-les-listes}{}
+
+Les listes sont des objets plus complexes que les vecteurs ou les
+matrices.
+
+\pause En particulier, elles peuvent contenir des \textbf{éléments de
+types différents} (numérique, caractère, logique, etc.), voire d’autres
+listes.
+
+\pause Cela en fait un type d’objet particulièrement souple pour
+\textbf{stocker et exploiter une information riche et structurée}.
+
+\aparte{Exemples}{Résultats d'un modèle de régression ou d'une méthode de classification.}
+
+\pause \bigskip \strong{Progression de la partie}
+
+\begin{enumerate}
+[1.]
+\tightlist
+\item
+  Création de listes et sélection d’éléments;
+\item
+  Calculs sur les listes.
+\end{enumerate}
+
+\end{frame}
+
+\hypertarget{module-3-travailler-avec-des-donnees-statistiques}{%
+\section{Module 3 : Travailler avec des données
+statistiques}\label{module-3-travailler-avec-des-donnees-statistiques}}
+
+\hypertarget{travailler-avec-des-donnees-statistiques}{%
+\subsection*{Travailler avec des données
+statistiques}\label{travailler-avec-des-donnees-statistiques}}
+\addcontentsline{toc}{subsection}{Travailler avec des données
+statistiques}
+
+\begin{frame}[fragile]{Objectifs et organisation}
+\protect\hypertarget{objectifs-et-organisation-2}{}
+
+\strong{Objectifs}
+
+\begin{enumerate}
+[1.]
+\tightlist
+\item
+  Revenir à des problématiques métiers courantes : sélection
+  d’observations et de variables, tri d’une table, etc.;
+\item
+  Mobiliser les fonctions abordées dans le module 2;
+\item
+  Présenter le calcul de statistiques descriptives avec R.
+\end{enumerate}
+
+\bigskip \pause \strong{Organisation}
+
+\begin{enumerate}
+[1.]
+\item
+  Manipuler les \texttt{data.frame}
+\item
+  Calculer des statistiques descriptives
+\item
+  Quelques liens pour aller plus loin
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}[fragile]{Manipuler les \texttt{data.frame}}
+\protect\hypertarget{manipuler-les-data.frame}{}
+
+Le type \texttt{data.frame} est le type le plus souvent utilisé pour
+exploiter des données statistiques.
+
+\pause Il s’agit d’un \textbf{cas particulier de listes} qui
+\textbf{partage beaucoup de propriétés avec les matrices}.
+
+\bigskip \pause \strong{Progression}
+
+\begin{enumerate}
+[1.]
+\item
+  Création d’un \texttt{data.frame} et sélection d’éléments : sélection
+  d’observations et de variables;
+\item
+  \pause Création ou modification de variables dans un
+  \texttt{data.frame};
+\item
+  \pause Modification de la structure d’un \texttt{data.frame} : tri,
+  concaténation, fusions, etc.;
+\item
+  \pause Calculs sur un \texttt{data.frame} : application d’une fonction
+  à toutes les variables, application d’une fonction par groupe.
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Calculer des statistiques descriptives}
+\protect\hypertarget{calculer-des-statistiques-descriptives}{}
+
+Plusieurs fonctions permettant d’effectuer des statistiques descriptives
+sont introduites dans les modules 1 et 2.
+
+\pause Cette partie présente ces fonctions de façon \textbf{plus
+systématique}, notamment autour de la question des \textbf{statistiques
+descriptives pondérées}.
+
+\bigskip \pause \strong{Progression}
+
+\begin{enumerate}
+[1.]
+\item
+  Statistiques descriptives sur variables quantitatives;
+\item
+  Statistiques descriptives sur variables qualitatives;
+\item
+  Création et paramétrisation de graphiques;
+\item
+  \pause Application à l’enquête Pisa 2012.
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}[fragile]{Quelques liens pour aller plus loin}
+\protect\hypertarget{quelques-liens-pour-aller-plus-loin}{}
+
+Les méthodes statistiques plus avancées sortent du cadre de cette
+formation au logiciel R.
+
+\pause Des liens sont néanmoins fournis pour approfondir deux aspects
+souvent utiles en pratique :
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{analyse de données multidimensionnelle} avec le
+  \href{https://CRAN.R-project.org/package=FactoMineR}{\link{\textit{package} \texttt{FactoMineR}}};
+\item
+  \href{http://teaching.slmc.fr/mqs2/index.html}{\link{\textbf{modèles de régression}}}
+  avec les fonctions \texttt{lm()} et \texttt{glm()}.
+\end{itemize}
+
+\bigskip \pause Un lien vers la
+\href{http://teaching.slmc.fr/perf/index.html}{\textbf{\link{formation R perfectionnement}}}
+est également proposé:
+
+\begin{itemize}
+\tightlist
+\item
+  outils et méthodes pour se perfectionner en R;
+\item
+  traitements avancés sur des données dans R;
+\item
+  graphiques et \emph{reporting} avec R.
+\end{itemize}
+
+\end{frame}
+
+\end{document}

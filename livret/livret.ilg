@@ -1,0 +1,18 @@
+This is makeindex, version 2.15 [MiKTeX 2.9.6700 64-bit] (kpathsea + Thai support).
+Scanning input file livret.idx....done (334 entries accepted, 0 rejected).
+Sorting entries......done (3122 comparisons).
+Generating output file livret.ind....
+## Warning (input = livret.idx, line = 14; output = livret.ind, line = 8):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = livret.idx, line = 16; output = livret.ind, line = 21):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = livret.idx, line = 17; output = livret.ind, line = 22):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = livret.idx, line = 78; output = livret.ind, line = 106):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+done (146 lines written, 4 warnings).
+Output written in livret.ind.
+Transcript written in livret.ilg.
