@@ -1,6 +1,3 @@
-\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
-\PassOptionsToPackage{hyphens}{url}
-%
 \documentclass[12pt,ignorenonframetext,]{beamer}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
@@ -13,74 +10,57 @@
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provides euro and other symbols
 \else % if luatex or xelatex
-  \usepackage{unicode-math}
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
+\usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\usepackage{hyperref}
+\newif\ifbibliography
 \hypersetup{
             pdftitle={Formation R initiation},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\newif\ifbibliography
+
 % Prevent slide breaks in the middle of a paragraph:
 \widowpenalties 1 10000
 \raggedbottom
-\setbeamertemplate{part page}{
-\centering
-\begin{beamercolorbox}[sep=16pt,center]{part title}
-  \usebeamerfont{part title}\insertpart\par
-\end{beamercolorbox}
-}
-\setbeamertemplate{section page}{
-\centering
-\begin{beamercolorbox}[sep=12pt,center]{part title}
-  \usebeamerfont{section title}\insertsection\par
-\end{beamercolorbox}
-}
-\setbeamertemplate{subsection page}{
-\centering
-\begin{beamercolorbox}[sep=8pt,center]{part title}
-  \usebeamerfont{subsection title}\insertsubsection\par
-\end{beamercolorbox}
-}
+
 \AtBeginPart{
+  \let\insertpartnumber\relax
+  \let\partname\relax
   \frame{\partpage}
 }
 \AtBeginSection{
   \ifbibliography
   \else
+    \let\insertsectionnumber\relax
+    \let\sectionname\relax
     \frame{\sectionpage}
   \fi
 }
 \AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
   \frame{\subsectionpage}
 }
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{0}
-
-% set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-
 % Packages à charger
 \usepackage[french]{babel}
 \usepackage{lmodern}
@@ -178,20 +158,18 @@
 \begin{document}
 \frame{\titlepage}
 
-\hypertarget{formation-r-initiation}{%
-\subsection*{Formation R initiation}\label{formation-r-initiation}}
+\subsection*{Formation R initiation}\label{formation-r-initiation}
 \addcontentsline{toc}{subsection}{Formation R initiation}
 
 \begin{frame}{Objectifs et pédagogie}
-\protect\hypertarget{objectifs-et-pedagogie}{}
 
 \strong{Objectifs de la formation}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \item
   \pause Acquérir des points de repères et des réflexes dans
-  l’utilisation du logiciel R;
+  l'utilisation du logiciel R;
 \item
   \pause Savoir travailler de façon autonome sur des données
   statistiques dans une perspective Insee;
@@ -203,11 +181,11 @@
 \bigskip \pause \strong{Principes pédagogiques}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \item
   \pause Pratique permanente et orientée métier;
 \item
-  \pause Autonomie dans l’apprentissage et progression à son rythme;
+  \pause Autonomie dans l'apprentissage et progression à son rythme;
 \item
   \pause Accompagnement personnalisé par le formateur.
 \end{enumerate}
@@ -215,12 +193,11 @@
 \end{frame}
 
 \begin{frame}[fragile]{Supports (1) : pages web de la formation}
-\protect\hypertarget{supports-1-pages-web-de-la-formation}{}
 
 Le support principal de la formation est un ensemble de pages web
-accessibles à l’adresse \href{http://r.slmc.fr}{\link{r.slmc.fr}}.
+accessibles à l'adresse \href{http://r.slmc.fr}{\link{r.slmc.fr}}.
 
-\bigskip \pause Ces pages web contiennent l’ensemble du contenu de la
+\bigskip \pause Ces pages web contiennent l'ensemble du contenu de la
 formation:
 
 \begin{itemize}
@@ -247,7 +224,6 @@ formation:
 \end{frame}
 
 \begin{frame}{Supports (2) : livret et présentations}
-\protect\hypertarget{supports-2-livret-et-presentations}{}
 
 Le contenu de la formation est également disponible dans un
 \strong{livret imprimé}:
@@ -255,11 +231,11 @@ Le contenu de la formation est également disponible dans un
 \begin{itemize}
 \tightlist
 \item
-  faciliter l’appropriation des notions;
+  faciliter l'appropriation des notions;
 \item
   réduire la fatigue visuelle;
 \item
-  constituer une référence à l’issue de la formation.
+  constituer une référence à l'issue de la formation.
 \end{itemize}
 
 \bigskip \pause De \strong{courtes présentations} ponctuent la
@@ -283,14 +259,13 @@ formation:
 \end{frame}
 
 \begin{frame}{Progression}
-\protect\hypertarget{progression}{}
 
 La formation est articulée autour de \textbf{trois modules}:
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \item
-  \pause \textbf{Prise en main du logiciel}: se repérer dans l’interface
+  \pause \textbf{Prise en main du logiciel}: se repérer dans l'interface
   et savoir explorer des données;
 \item
   \pause \textbf{Manipuler les éléments fondamentaux du langage}:
@@ -306,7 +281,7 @@ La formation est articulée autour de \textbf{trois modules}:
 \tightlist
 \item
   \pause Les modules 1 et 3 sont \textbf{orientés métier}: travail sur
-  des données Insee dans une perspective \enquote{chargé d’études}.
+  des données Insee dans une perspective \enquote{chargé d'études}.
 \item
   \pause Le module 2 est un \textbf{détour nécessaire} pour maîtriser
   les manipulations effectuées dans le module 3.
@@ -315,15 +290,13 @@ La formation est articulée autour de \textbf{trois modules}:
 \end{frame}
 
 \begin{frame}{Organisation pratique}
-\protect\hypertarget{organisation-pratique}{}
 
 \strong{Travail en autonomie}
 
 \begin{itemize}
+\tightlist
 \item
-  \vspace{-0.2cm}
-
-  partie \enquote{cours} à partir du livret;
+  \vspace{-0.2cm} partie \enquote{cours} à partir du livret;
 \item
   cas pratiques corrigés sur AUS;
 \item
@@ -333,48 +306,42 @@ La formation est articulée autour de \textbf{trois modules}:
 \bigskip \pause \strong{Horaires}
 
 \begin{itemize}
+\tightlist
 \item
-  \vspace{-0.2cm}
-
-  proposition : 9h30-12h20 puis 13h40-16h30;
+  \vspace{-0.2cm} proposition : 9h30-12h20 puis 13h40-16h30;
 \item
-  pauses : 11h, 15h et quand vous sentez que c’est nécessaire !
+  pauses : 11h, 15h et quand vous sentez que c'est nécessaire !
 \end{itemize}
 
 \bigskip \pause \strong{Conditions de travail} La formation est
 \textbf{intensive}:
 
 \begin{itemize}
+\tightlist
 \item
-  \vspace{-0.2cm}
-
-  prenez le temps de bien paramétrer votre espace de travail (éclairage,
-  siège, etc.) et faites des pauses régulièrement;
+  \vspace{-0.2cm} prenez le temps de bien paramétrer votre espace de
+  travail (éclairage, siège, etc.) et faites des pauses régulièrement;
 \item
-  n’hésitez pas à m’indiquer tout ce qui peut améliorer votre confort.
+  n'hésitez pas à m'indiquer tout ce qui peut améliorer votre confort.
 \end{itemize}
 
 \end{frame}
 
-\hypertarget{module-1-prise-en-main-du-logiciel}{%
 \section{Module 1 : Prise en main du
-logiciel}\label{module-1-prise-en-main-du-logiciel}}
+logiciel}\label{module-1-prise-en-main-du-logiciel}
 
-\hypertarget{prise-en-main-du-logiciel}{%
-\subsection*{Prise en main du
-logiciel}\label{prise-en-main-du-logiciel}}
+\subsection*{Prise en main du logiciel}\label{prise-en-main-du-logiciel}
 \addcontentsline{toc}{subsection}{Prise en main du logiciel}
 
 \begin{frame}{Objectifs et organisation}
-\protect\hypertarget{objectifs-et-organisation}{}
 
 \strong{Objectifs}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Acquérir des points de repère dans l’interface de R;
+  Acquérir des points de repère dans l'interface de R;
 \item
   Mener quelques traitements simples pour observer le fonctionnement du
   logiciel;
@@ -386,22 +353,21 @@ logiciel}\label{prise-en-main-du-logiciel}}
 \bigskip \pause \strong{Organisation}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \item
-  Un peu d’histoire et quelques grands principes
+  Un peu d'histoire et quelques grands principes
 \item
-  Découverte de l’interface
+  Découverte de l'interface
 \item
   Charger et explorer des données
 \item
-  Importer des données à l’aide de \emph{packages}
+  Importer des données à l'aide de \emph{packages}
 \end{enumerate}
 
 \end{frame}
 
-\begin{frame}[fragile]{\large Un peu d’histoire et quelques grands
+\begin{frame}[fragile]{\large Un peu d'histoire et quelques grands
 principes}
-\protect\hypertarget{un-peu-dhistoire-et-quelques-grands-principes}{}
 
 Insister sur les \textbf{spécificités de R}, notamment par rapport à
 SAS:
@@ -415,7 +381,7 @@ SAS:
   des \texttt{\textbackslash{}}.
 \end{itemize}
 
-\bigskip \pause Plus généralement, R s’apparente davantage à un
+\bigskip \pause Plus généralement, R s'apparente davantage à un
 \textbf{langage de programmation \enquote{classique}} (Python par
 exemple):
 
@@ -434,8 +400,7 @@ exemple):
 
 \end{frame}
 
-\begin{frame}{Découverte de l’interface}
-\protect\hypertarget{decouverte-de-linterface}{}
+\begin{frame}{Découverte de l'interface}
 
 Faire de \textbf{premières manipulations} dans les deux interfaces de R
 disponibles sur AUS:
@@ -446,7 +411,7 @@ disponibles sur AUS:
   utilisé en mode \enquote{console};
 \item
   Rstudio: environnement de développement intégré qui facilite
-  considérablement l’\textbf{écriture de scripts} (colorisation du code,
+  considérablement l'\textbf{écriture de scripts} (colorisation du code,
   auto-complétion, etc.).
 \end{itemize}
 
@@ -455,28 +420,27 @@ disponibles sur AUS:
 \begin{itemize}
 \tightlist
 \item
-  création d’objets simples et opérations arithmétiques;
+  création d'objets simples et opérations arithmétiques;
 \item
   affichage et manipulation des objets stockés en mémoire;
 \item
-  utilisation de l’aide intégrée dans le logiciel;
+  utilisation de l'aide intégrée dans le logiciel;
 \item
-  écriture d’une première fonction personnalisée.
+  écriture d'une première fonction personnalisée.
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}[fragile]{Charger et explorer des données}
-\protect\hypertarget{charger-et-explorer-des-donnees}{}
 
 Savoir \textbf{utiliser des données} dans R :
 
 \begin{itemize}
 \tightlist
 \item
-  chargement d’un fichier de données \texttt{.RData};
+  chargement d'un fichier de données \texttt{.RData};
 \item
-  principales caractéristiques des données : nombre d’observations,
+  principales caractéristiques des données : nombre d'observations,
   affichage des premières lignes, etc.
 \end{itemize}
 
@@ -485,10 +449,10 @@ Savoir \textbf{utiliser des données} dans R :
 \begin{itemize}
 \tightlist
 \item
-  indicateurs statistiques usuels: moyenne d’une variable quantitative,
-  distribution d’une variable qualitative;
+  indicateurs statistiques usuels: moyenne d'une variable quantitative,
+  distribution d'une variable qualitative;
 \item
-  ventilation des traitements selon les modalités d’une variable
+  ventilation des traitements selon les modalités d'une variable
   qualitative;
 \item
   production de graphiques simples.
@@ -496,8 +460,7 @@ Savoir \textbf{utiliser des données} dans R :
 
 \end{frame}
 
-\begin{frame}[fragile]{Importer des données à l’aide de \emph{packages}}
-\protect\hypertarget{importer-des-donnees-a-laide-de-packages}{}
+\begin{frame}[fragile]{Importer des données à l'aide de \emph{packages}}
 
 \textbf{Importer des données} qui ne sont pas en format R natif:
 
@@ -511,7 +474,7 @@ Savoir \textbf{utiliser des données} dans R :
 
 \bigskip \pause \textbf{Exporter des données} au format R natif.
 
-\bigskip \pause Percevoir l’\textbf{importance des \emph{packages}} dans
+\bigskip \pause Percevoir l'\textbf{importance des \emph{packages}} dans
 R :
 
 \begin{itemize}
@@ -524,23 +487,20 @@ R :
 
 \end{frame}
 
-\hypertarget{module-2-manipuler-les-elements-fondamentaux-du-langage}{%
 \section{Module 2 : Manipuler les éléments fondamentaux du
-langage}\label{module-2-manipuler-les-elements-fondamentaux-du-langage}}
+langage}\label{module-2-manipuler-les-elements-fondamentaux-du-langage}
 
-\hypertarget{manipuler-les-elements-fondamentaux-du-langage}{%
 \subsection*{Manipuler les éléments fondamentaux du
-langage}\label{manipuler-les-elements-fondamentaux-du-langage}}
+langage}\label{manipuler-les-elements-fondamentaux-du-langage}
 \addcontentsline{toc}{subsection}{Manipuler les éléments fondamentaux du
 langage}
 
 \begin{frame}{Objectifs et organisation}
-\protect\hypertarget{objectifs-et-organisation-1}{}
 
 \strong{Objectifs}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
   Introduire progressivement les briques élémentaires du langage de R;
@@ -553,7 +513,7 @@ langage}
 \bigskip \pause \strong{Organisation}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \item
   Manipuler les vecteurs
 \item
@@ -565,7 +525,6 @@ langage}
 \end{frame}
 
 \begin{frame}{Manipuler les vecteurs}
-\protect\hypertarget{manipuler-les-vecteurs}{}
 
 Les vecteurs sont les éléments fondamentaux du langage de R. Ils servent
 notamment :
@@ -573,10 +532,10 @@ notamment :
 \begin{itemize}
 \tightlist
 \item
-  à coder l’information statistique: les variables d’une table sont des
+  à coder l'information statistique: les variables d'une table sont des
   vecteurs;
 \item
-  à modifier le contenu d’une table: créer de nouvelles variables,
+  à modifier le contenu d'une table: créer de nouvelles variables,
   sélectionner des variables et des observations;
 \item
   à calculer des indicateurs statistiques: les \emph{inputs} de la
@@ -586,10 +545,10 @@ notamment :
 \pause \bigskip \strong{Progression de la partie}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Création de vecteurs et sélection d’éléments;
+  Création de vecteurs et sélection d'éléments;
 \item
   Spécificités des différents types de vecteurs et manipulations;
 \item
@@ -599,7 +558,6 @@ notamment :
 \end{frame}
 
 \begin{frame}[fragile]{Manipuler les matrices}
-\protect\hypertarget{manipuler-les-matrices}{}
 
 Les matrices sont une généralisation directe des vecteurs en deux
 dimensions (ou plus, on parle alors de \texttt{array}).
@@ -608,21 +566,20 @@ dimensions (ou plus, on parle alors de \texttt{array}).
 égards des tableaux de données statistiques.
 
 \pause \bigskip \strong{Objectif de la partie} Création de matrices et
-sélection d’éléments.
+sélection d'éléments.
 
 \end{frame}
 
 \begin{frame}{Manipuler les listes}
-\protect\hypertarget{manipuler-les-listes}{}
 
 Les listes sont des objets plus complexes que les vecteurs ou les
 matrices.
 
 \pause En particulier, elles peuvent contenir des \textbf{éléments de
-types différents} (numérique, caractère, logique, etc.), voire d’autres
+types différents} (numérique, caractère, logique, etc.), voire d'autres
 listes.
 
-\pause Cela en fait un type d’objet particulièrement souple pour
+\pause Cela en fait un type d'objet particulièrement souple pour
 \textbf{stocker et exploiter une information riche et structurée}.
 
 \aparte{Exemples}{Résultats d'un modèle de régression ou d'une méthode de classification.}
@@ -630,37 +587,34 @@ listes.
 \pause \bigskip \strong{Progression de la partie}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Création de listes et sélection d’éléments;
+  Création de listes et sélection d'éléments;
 \item
   Calculs sur les listes.
 \end{enumerate}
 
 \end{frame}
 
-\hypertarget{module-3-travailler-avec-des-donnees-statistiques}{%
 \section{Module 3 : Travailler avec des données
-statistiques}\label{module-3-travailler-avec-des-donnees-statistiques}}
+statistiques}\label{module-3-travailler-avec-des-donnees-statistiques}
 
-\hypertarget{travailler-avec-des-donnees-statistiques}{%
 \subsection*{Travailler avec des données
-statistiques}\label{travailler-avec-des-donnees-statistiques}}
+statistiques}\label{travailler-avec-des-donnees-statistiques}
 \addcontentsline{toc}{subsection}{Travailler avec des données
 statistiques}
 
 \begin{frame}[fragile]{Objectifs et organisation}
-\protect\hypertarget{objectifs-et-organisation-2}{}
 
 \strong{Objectifs}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
   Revenir à des problématiques métiers courantes : sélection
-  d’observations et de variables, tri d’une table, etc.;
+  d'observations et de variables, tri d'une table, etc.;
 \item
   Mobiliser les fonctions abordées dans le module 2;
 \item
@@ -670,7 +624,7 @@ statistiques}
 \bigskip \pause \strong{Organisation}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \item
   Manipuler les \texttt{data.frame}
 \item
@@ -682,38 +636,36 @@ statistiques}
 \end{frame}
 
 \begin{frame}[fragile]{Manipuler les \texttt{data.frame}}
-\protect\hypertarget{manipuler-les-data.frame}{}
 
 Le type \texttt{data.frame} est le type le plus souvent utilisé pour
 exploiter des données statistiques.
 
-\pause Il s’agit d’un \textbf{cas particulier de listes} qui
+\pause Il s'agit d'un \textbf{cas particulier de listes} qui
 \textbf{partage beaucoup de propriétés avec les matrices}.
 
 \bigskip \pause \strong{Progression}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \item
-  Création d’un \texttt{data.frame} et sélection d’éléments : sélection
-  d’observations et de variables;
+  Création d'un \texttt{data.frame} et sélection d'éléments : sélection
+  d'observations et de variables;
 \item
   \pause Création ou modification de variables dans un
   \texttt{data.frame};
 \item
-  \pause Modification de la structure d’un \texttt{data.frame} : tri,
+  \pause Modification de la structure d'un \texttt{data.frame} : tri,
   concaténation, fusions, etc.;
 \item
-  \pause Calculs sur un \texttt{data.frame} : application d’une fonction
-  à toutes les variables, application d’une fonction par groupe.
+  \pause Calculs sur un \texttt{data.frame} : application d'une fonction
+  à toutes les variables, application d'une fonction par groupe.
 \end{enumerate}
 
 \end{frame}
 
 \begin{frame}{Calculer des statistiques descriptives}
-\protect\hypertarget{calculer-des-statistiques-descriptives}{}
 
-Plusieurs fonctions permettant d’effectuer des statistiques descriptives
+Plusieurs fonctions permettant d'effectuer des statistiques descriptives
 sont introduites dans les modules 1 et 2.
 
 \pause Cette partie présente ces fonctions de façon \textbf{plus
@@ -723,7 +675,7 @@ descriptives pondérées}.
 \bigskip \pause \strong{Progression}
 
 \begin{enumerate}
-[1.]
+\def\labelenumi{\arabic{enumi}.}
 \item
   Statistiques descriptives sur variables quantitatives;
 \item
@@ -731,13 +683,12 @@ descriptives pondérées}.
 \item
   Création et paramétrisation de graphiques;
 \item
-  \pause Application à l’enquête Pisa 2012.
+  \pause Application à l'enquête Pisa 2012.
 \end{enumerate}
 
 \end{frame}
 
 \begin{frame}[fragile]{Quelques liens pour aller plus loin}
-\protect\hypertarget{quelques-liens-pour-aller-plus-loin}{}
 
 Les méthodes statistiques plus avancées sortent du cadre de cette
 formation au logiciel R.

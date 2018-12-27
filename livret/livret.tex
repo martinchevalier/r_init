@@ -36,37 +36,37 @@
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
 % Add ',fontsize=\small' for more characters per line
 \newenvironment{Shaded}{}{}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\AttributeTok}[1]{#1}
-\newcommand{\BaseNTok}[1]{#1}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.00,0.50,0.50}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\ConstantTok}[1]{#1}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
 \newcommand{\DataTypeTok}[1]{#1}
 \newcommand{\DecValTok}[1]{#1}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\BaseNTok}[1]{#1}
 \newcommand{\FloatTok}[1]{#1}
-\newcommand{\FunctionTok}[1]{#1}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{#1}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{1.00,0.25,0.00}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{1.00,0.25,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\ConstantTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.00,0.50,0.50}{#1}}
 \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.50,0.50}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.00,0.50,0.50}{#1}}
 \newcommand{\StringTok}[1]{\textcolor[rgb]{0.00,0.50,0.50}{#1}}
-\newcommand{\VariableTok}[1]{#1}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.00,0.50,0.50}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.00,0.50,0.50}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{1.00,0.25,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{#1}
+\newcommand{\VariableTok}[1]{#1}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand{\OperatorTok}[1]{#1}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{1.00,0.25,0.00}{#1}}
+\newcommand{\AttributeTok}[1]{#1}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -112,15 +112,16 @@
 }
 
 \setlength{\droptitle}{-2em}
-  \title{Formation R Initiation}
-  \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-  \author{Martin Chevalier (Insee)}
-  \preauthor{\centering\large\emph}
-  \postauthor{\par}
-  \date{}
-  \predate{}\postdate{}
 
+  \title{Formation R Initiation}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Martin Chevalier (Insee)}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+    \date{}
+    \predate{}\postdate{}
+  
 \usepackage[french]{babel}
 
 
@@ -217,7 +218,7 @@ initiation des 22 et 23 janvier 2018.
 
 Les supports de cette formation ont été conçus sous RStudio avec
 \href{http://rmarkdown.rstudio.com/}{R Markdown} et compilés le
-01/06/2018. Certains éléments de mise en forme du site compagnon sont
+27/12/2018. Certains éléments de mise en forme du site compagnon sont
 repris de l'ouvrage \href{http://r-pkgs.had.co.nz/}{R packages} de
 Hadley Wickham.
 
@@ -230,14 +231,16 @@ est librement réutilisable sous ©~2016-2018 Martin Chevalier
 
 \renewcommand{\cftsecfont}{\small\bfseries}
 
-\solfalse
+\soltrue
 
 \chapter{Prise en main du logiciel}
- \minitoc
+
+\minitoc 
 
 ~
 
-\#\#Un peu d'histoire et quelques grands principes
+\section{Un peu d'histoire et quelques grands
+principes}\label{un-peu-dhistoire-et-quelques-grands-principes}
 
 R est un langage utilisé pour le traitement de données statistiques créé
 au début des années 1990 par deux chercheurs de l'université d'Auckland,
@@ -252,7 +255,7 @@ principalement diffusé parmi les chercheurs et les statisticiens
 \enquote{académiques}, R est aujourd'hui \textbf{de plus en plus utilisé
 au sein des Instituts nationaux de statistiques}.
 
-\#\#\#R : un logiciel libre
+\subsection{R : un logiciel libre}\label{r-un-logiciel-libre}
 
 À la différence d'autres logiciels de traitement statistique (SAS, SPSS
 ou Stata notamment), R est un \textbf{logiciel libre} : sa licence
@@ -321,7 +324,8 @@ Chambers}:
 \emph{John Chambers}
 \end{quote}
 
-\#\#\#\enquote{Tout ce qui existe est un objet}
+\subsection{\texorpdfstring{\enquote{Tout ce qui existe est un
+objet}}{Tout ce qui existe est un objet}}\label{tout-ce-qui-existe-est-un-objet}
 
 Tout ce qui existe et est manipulable dans R est un \textbf{objet}
 identifié par son nom et par son \textbf{environnement de référence}.
@@ -436,7 +440,9 @@ et des inconvénients :
   actuellement).
 \end{itemize}
 
-\#\#\#\enquote{Tout ce qui se produit est un appel de fonction}
+\subsection{\texorpdfstring{\enquote{Tout ce qui se produit est un appel
+de
+fonction}}{Tout ce qui se produit est un appel de fonction}}\label{tout-ce-qui-se-produit-est-un-appel-de-fonction}
 
 Une fois les objets sur lesquels on souhaite travailler créés
 (\emph{i.e.} les tables importées), R dispose d'un grand nombre de
@@ -505,7 +511,7 @@ parenthèse)}, R affiche son code :
 \NormalTok{  ##   resultat <- param1 * 10 + param2}
 \NormalTok{  ##   return(resultat)}
 \NormalTok{  ## \}}
-\NormalTok{  ## <environment: 0x000000002276f1e8>}
+\NormalTok{  ## <environment: 0x12e59d08>}
 \end{Highlighting}
 \end{Shaded}
 
@@ -523,7 +529,7 @@ fonctions.\index{\texttt{read.delim}}
 \NormalTok{  ##     fill = TRUE, comment.char = "", ...) }
 \NormalTok{  ## read.table(file = file, header = header, sep = sep, quote = quote, }
 \NormalTok{  ##     dec = dec, fill = fill, comment.char = comment.char, ...)}
-\NormalTok{  ## <bytecode: 0x000000001f9ec528>}
+\NormalTok{  ## <bytecode: 0xb3bd2c8>}
 \NormalTok{  ## <environment: namespace:utils>}
 \end{Highlighting}
 \end{Shaded}
@@ -556,7 +562,7 @@ aux besoins les plus spécifiques}.
 
 ~
 
-\#\#Découverte de l'interface
+\section{Découverte de l'interface}\label{decouverte-de-linterface}
 
 En tant que tel, R est un \emph{langage} susceptible d'être implémenté
 dans de
@@ -567,7 +573,8 @@ interfaces}. Le choix est fait ici de présenter d'abord son
 \href{https://www.rstudio.com/}{RStudio}. Dans tous les cas, la
 plate-forme utilisée est Windows.
 
-\#\#\#Effectuer des manipulations de base dans la console
+\subsection{Effectuer des manipulations de base dans la
+console}\label{effectuer-des-manipulations-de-base-dans-la-console}
 
 Par défaut sous Windows, R est fourni avec une interface graphique
 minimiale (\texttt{Rgui.exe}), dont la fenêtre principale est une
@@ -647,13 +654,11 @@ la console:
 
 ~
 
-\hypertarget{cas-pratique-1.1-convertir-une-duree-de-secondes-en-minutes-secondes}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 1.1} Convertir une
 durée de secondes en
-minutes-secondes}{Cas pratique 1.1 Convertir une durée de secondes en minutes-secondes}}\label{cas-pratique-1.1-convertir-une-duree-de-secondes-en-minutes-secondes}}
+minutes-secondes}{Cas pratique 1.1 Convertir une durée de secondes en minutes-secondes}}\label{cas-pratique-1.1-convertir-une-duree-de-secondes-en-minutes-secondes}
 
 \addcontentsline{cp}{caspratique}{1.1 Convertir une durée de secondes en minutes-secondes}
-
 Il est souvent très utile de mesurer et d'afficher la durée d'un
 traitement un peu long (script exécuté régulièrement par exemple). La
 fonction \texttt{system.time()}\index{\texttt{sys.time}|textbf} de R
@@ -694,9 +699,9 @@ une durée de secondes en minutes-secondes}.
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Calculez le nombre de minutes correspondant à la valeur de
   \texttt{duree}. Comment obtenir un nombre entier (\emph{cf.} le
@@ -724,9 +729,9 @@ une durée de secondes en minutes-secondes}.
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Calculez le nombre de secondes restantes une fois le nombre de minutes
   déterminé. Vous pouvez utiliser la flèche \(\uparrow\) du clavier pour
@@ -752,9 +757,9 @@ une durée de secondes en minutes-secondes}.
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Utilisez la fonction \texttt{help()} (ou de façon équivalente
   \texttt{?}) pour recherchez de l'aide sur la fonction
@@ -815,20 +820,18 @@ une durée de secondes en minutes-secondes}.
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
 ~
 
-\hypertarget{cas-pratique-1.2-manipuler-des-objets-en-memoire}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 1.2} Manipuler des
 objets en
-mémoire}{Cas pratique 1.2 Manipuler des objets en mémoire}}\label{cas-pratique-1.2-manipuler-des-objets-en-memoire}}
+mémoire}{Cas pratique 1.2 Manipuler des objets en mémoire}}\label{cas-pratique-1.2-manipuler-des-objets-en-memoire}
 
 \addcontentsline{cp}{caspratique}{1.2 Manipuler des objets en mémoire}
-
 Par défaut en mode console, l'utilisateur ne dispose d'aucune
 information sur les objets stockés en mémoire. \textbf{L'objectif de ce
 cas pratique est de vous familiariser avec les principales fonctions de
@@ -860,9 +863,9 @@ manipulation des objets en mémoire.}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Associez à l'objet \texttt{monTexte} la chaîne de caractère
   \texttt{"Hello\ world!"}. En utilisant la fonction
@@ -893,9 +896,9 @@ manipulation des objets en mémoire.}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Utilisez la fonction \texttt{rm()}\index{\texttt{rm}} pour supprimer
   les objets \texttt{Duree} et \texttt{monTexte}. Vérifiez que la
@@ -921,9 +924,9 @@ manipulation des objets en mémoire.}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Recherchez de l'aide sur la fonction \texttt{rm()}\index{\texttt{rm}},
   et plus spécifiquement sur son argument \texttt{list}. En utilisant
@@ -968,12 +971,13 @@ manipulation des objets en mémoire.}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
-\#\#\#Utiliser des scripts dans RStudio
+\subsection{Utiliser des scripts dans
+RStudio}\label{utiliser-des-scripts-dans-rstudio}
 
 Quoique toutes les fonctionnalités de R soient accessibles en mode
 console, ce type d'interface présente l'inconvénient majeur de
@@ -1064,13 +1068,11 @@ L'utilisation de l'éditeur de scripts sous \textbf{RStudio} est analogue
 
 ~
 
-\hypertarget{cas-pratique-1.3-construire-une-fonction-de-conversion-de-secondes-en-minutes-secondes}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 1.3} Construire une
 fonction de conversion de secondes en
-minutes-secondes}{Cas pratique 1.3 Construire une fonction de conversion de secondes en minutes-secondes}}\label{cas-pratique-1.3-construire-une-fonction-de-conversion-de-secondes-en-minutes-secondes}}
+minutes-secondes}{Cas pratique 1.3 Construire une fonction de conversion de secondes en minutes-secondes}}\label{cas-pratique-1.3-construire-une-fonction-de-conversion-de-secondes-en-minutes-secondes}
 
 \addcontentsline{cp}{caspratique}{1.3 Construire une fonction de conversion de secondes en minutes-secondes}
-
 Ce cas pratique reprend les éléments du cas pratique 1.1. Son objectif
 est de construire une fonction \texttt{conversion()} qui, à partir d'un
 paramètre \texttt{duree} exprimé en secondes, crée une chaîne de
@@ -1114,9 +1116,9 @@ caractère du type
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Intégrez à la fonction \texttt{conversion()} les éléments définis aux
   différentes étapes du cas pratique 1.1 (définition de \texttt{min}, de
@@ -1147,9 +1149,9 @@ caractère du type
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Observez comment l'éditeur colorise votre code, mais aussi les
   différents objets créés dans l'explorateur d'environnements. Saisissez
@@ -1163,7 +1165,8 @@ caractère du type
 
 ~
 
-\#\#Charger et explorer des données
+\section{Charger et explorer des
+données}\label{charger-et-explorer-des-donnees}
 
 \textbf{Explorer des données statistiques avec R est relativement
 intuitif}, en particulier grâce aux fonctionnalités de RStudio :
@@ -1365,13 +1368,11 @@ le plus fréquent pour les tables de données dans R. Ce type d'objet est
 
 ~
 
-\hypertarget{cas-pratique-1.4-charger-et-explorer-des-donnees-le-recensement-de-la-population-2013-dans-les-hauts-de-seine}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 1.4} Charger et
 explorer des données : Le recensement de la population 2013 dans les
-Hauts-de-Seine}{Cas pratique 1.4 Charger et explorer des données : Le recensement de la population 2013 dans les Hauts-de-Seine}}\label{cas-pratique-1.4-charger-et-explorer-des-donnees-le-recensement-de-la-population-2013-dans-les-hauts-de-seine}}
+Hauts-de-Seine}{Cas pratique 1.4 Charger et explorer des données : Le recensement de la population 2013 dans les Hauts-de-Seine}}\label{cas-pratique-1.4-charger-et-explorer-des-donnees-le-recensement-de-la-population-2013-dans-les-hauts-de-seine}
 
 \addcontentsline{cp}{caspratique}{1.4 Charger et explorer des données : Le recensement de la population 2013 dans les Hauts-de-Seine}
-
 Ce cas pratique vise à charger et à effectuer \textbf{quelques
 manipulations simples sur une extraction du fichier du recensement de la
 population (RP) 2013 dans les Hauts-de-Seine} (accessible sur le
@@ -1434,9 +1435,9 @@ sous-partie suivante) et sont contenues dans le fichier
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Utilisez l'opérateur \texttt{\$}\index{\texttt{\$}} pour afficher les
   valeurs de la variable de pondération \texttt{IPONDI}. Pensez à bien
@@ -1474,9 +1475,9 @@ sous-partie suivante) et sont contenues dans le fichier
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Affichez les modalités distinctes de la variable
   \texttt{SEXE}\index{\texttt{unique}}. Appliquez la fonction
@@ -1515,14 +1516,15 @@ sous-partie suivante) et sont contenues dans le fichier
 
   \includegraphics{livret_files/figure-latex/unnamed-chunk-85-1.pdf}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
 ~
 
-\#\#Importer des données à l'aide de \emph{packages}
+\section{\texorpdfstring{Importer des données à l'aide de
+\emph{packages}}{Importer des données à l'aide de packages}}\label{importer-des-donnees-a-laide-de-packages}
 
 En règle générale, les fichiers de données sur lesquels on souhaite
 travailler ne sont pas en format R natif : il convient donc de les
@@ -1561,7 +1563,8 @@ nom du fichier à importer pour que R le trouve automatiquement
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
-\#\#\#Importer des fichiers plats avec \texttt{read.table()}
+\subsection{\texorpdfstring{Importer des fichiers plats avec
+\texttt{read.table()}}{Importer des fichiers plats avec read.table()}}\label{importer-des-fichiers-plats-avec-read.table}
 
 R dispose nativement d'un fonction capable de lire les fichiers dits
 \enquote{plats} (\texttt{.txt}, \texttt{.csv} ou \texttt{.dlm} le plus
@@ -1611,8 +1614,9 @@ défaut par LibreOffice Calc) : c'est donc la fonction
 \end{Highlighting}
 \end{Shaded}
 
-\#\#\#Importer des fichiers \texttt{.sas7bdat} avec le \emph{package}
-\texttt{haven}
+\subsection{\texorpdfstring{Importer des fichiers \texttt{.sas7bdat}
+avec le \emph{package}
+\texttt{haven}}{Importer des fichiers .sas7bdat avec le package haven}}\label{importer-des-fichiers-.sas7bdat-avec-le-package-haven}
 
 Au-delà des fonctions natives de R, plusieurs \emph{packages} permettent
 d'importer facilement des données dans R, comme le \emph{package}
@@ -1630,7 +1634,7 @@ des \emph{packages} installés}
 \end{figure}
 
 Une des principaux avantages de R est de disposer d'un très grand nombre
-de \emph{packages} complémentaires (12 218 au 01/06/2018) très faciles à
+de \emph{packages} complémentaires (13 581 au 27/12/2018) très faciles à
 installer. Pour installer un package, il suffit en effet de saisir:
 
 \begin{Shaded}
@@ -1695,18 +1699,19 @@ plus qu'à utiliser la fonction
 \CommentTok{# Premières lignes de bpe2_sas}
 \KeywordTok{head}\NormalTok{(bpe2_sas)}
 \NormalTok{  ## # A tibble: 6 x 8}
-\NormalTok{  ##   ancreg   reg   dep depcom     dciris    an typequ nb_equip}
-\NormalTok{  ##    <chr> <chr> <chr>  <chr>      <chr> <chr>  <chr>    <dbl>}
-\NormalTok{  ## 1     11    11    92  92049 92049_0000  2015   B301        1}
-\NormalTok{  ## 2     11    11    92  92049 92049_0000  2015   F101        1}
-\NormalTok{  ## 3     11    11    92  92049 92049_0000  2015   F112        2}
-\NormalTok{  ## 4     11    11    92  92049 92049_0000  2015   F114        1}
-\NormalTok{  ## 5     11    11    92  92049 92049_0000  2015   F120        1}
-\NormalTok{  ## 6     11    11    92  92049 92049_0000  2015   F121        4}
+\NormalTok{  ##   ancreg reg   dep   depcom dciris     an    typequ nb_equip}
+\NormalTok{  ##   <chr>  <chr> <chr> <chr>  <chr>      <chr> <chr>     <dbl>}
+\NormalTok{  ## 1 11     11    92    92049  92049_0000 2015  B301          1}
+\NormalTok{  ## 2 11     11    92    92049  92049_0000 2015  F101          1}
+\NormalTok{  ## 3 11     11    92    92049  92049_0000 2015  F112          2}
+\NormalTok{  ## 4 11     11    92    92049  92049_0000 2015  F114          1}
+\NormalTok{  ## 5 11     11    92    92049  92049_0000 2015  F120          1}
+\NormalTok{  ## 6 11     11    92    92049  92049_0000 2015  F121          4}
 \end{Highlighting}
 \end{Shaded}
 
-\#\#\#Sauvegarder des données en format R natif
+\subsection{Sauvegarder des données en format R
+natif}\label{sauvegarder-des-donnees-en-format-r-natif}
 
 Une fois des données importées, il est souvent utile de les
 \textbf{sauvegarder sur le disque dur dans un format susceptible d'être
@@ -1742,13 +1747,11 @@ défaut}, ce qui diminue considérablement leur taille sur le disque.
 
 ~
 
-\hypertarget{cas-pratique-1.5-importer-et-sauvegarder-des-donnees}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 1.5} Importer et
 sauvegarder des
-données}{Cas pratique 1.5 Importer et sauvegarder des données}}\label{cas-pratique-1.5-importer-et-sauvegarder-des-donnees}}
+données}{Cas pratique 1.5 Importer et sauvegarder des données}}\label{cas-pratique-1.5-importer-et-sauvegarder-des-donnees}
 
 \addcontentsline{cp}{caspratique}{1.5 Importer et sauvegarder des données}
-
 Les \textbf{données du
 \href{https://www.insee.fr/fr/information/2666684}{Code officiel
 géographique}} (COG) sont diffusées sur le site de l'Insee en plusieurs
@@ -1781,7 +1784,7 @@ données dans R et à les sauvegarder en format R natif.
 \NormalTok{  ##  $ CHEFLIEU: Factor w/ 101 levels "01053","02408",..: 1 2 3 4 5 6 7 8 9 10 ...}
 \NormalTok{  ##  $ TNCC    : int  5 5 5 4 4 4 5 4 5 5 ...}
 \NormalTok{  ##  $ NCC     : Factor w/ 101 levels "AIN","AISNE",..: 1 2 3 4 45 5 6 7 8 9 ...}
-\NormalTok{  ##  $ NCCENR  : Factor w/ 101 levels "Ain","Aisne",..: 1 2 3 4 45 5 6 7 8 9 ...}
+\NormalTok{  ##  $ NCCENR  : Factor w/ 101 levels "Ain","Aisne",..: 1 2 3 4 46 5 6 7 8 9 ...}
 \KeywordTok{head}\NormalTok{(dep)}
 \NormalTok{  ##   REGION DEP CHEFLIEU TNCC                     NCC}
 \NormalTok{  ## 1     84  01    01053    5                     AIN}
@@ -1800,9 +1803,9 @@ données dans R et à les sauvegarder en format R natif.
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Le fichier \texttt{arrond2017.sas7bdat} correspond à la table des
   arrondissements convertie au format \texttt{.sas7bdat}. Utilisez le
@@ -1827,51 +1830,50 @@ données dans R et à les sauvegarder en format R natif.
 \NormalTok{arrond <-}\StringTok{ }\KeywordTok{read_sas}\NormalTok{(}\StringTok{"arrond2017.sas7bdat"}\NormalTok{)}
 \KeywordTok{str}\NormalTok{(arrond)}
 \NormalTok{  ## Classes 'tbl_df', 'tbl' and 'data.frame':  333 obs. of  9 variables:}
-\NormalTok{  ##  $ REGION  : atomic  84 84 84 84 ...}
+\NormalTok{  ##  $ REGION  : chr  "84" "84" "84" "84" ...}
 \NormalTok{  ##   ..- attr(*, "label")= chr "REGION"}
 \NormalTok{  ##   ..- attr(*, "format.sas")= chr "$"}
-\NormalTok{  ##  $ DEP     : atomic  01 01 01 01 ...}
+\NormalTok{  ##  $ DEP     : chr  "01" "01" "01" "01" ...}
 \NormalTok{  ##   ..- attr(*, "label")= chr "DEP"}
 \NormalTok{  ##   ..- attr(*, "format.sas")= chr "$"}
-\NormalTok{  ##  $ AR      : atomic  1 2 3 4 ...}
+\NormalTok{  ##  $ AR      : chr  "1" "2" "3" "4" ...}
 \NormalTok{  ##   ..- attr(*, "label")= chr "AR"}
 \NormalTok{  ##   ..- attr(*, "format.sas")= chr "$"}
-\NormalTok{  ##  $ CHEFLIEU: atomic  01034 01053 01173 01269 ...}
+\NormalTok{  ##  $ CHEFLIEU: chr  "01034" "01053" "01173" "01269" ...}
 \NormalTok{  ##   ..- attr(*, "label")= chr "CHEFLIEU"}
 \NormalTok{  ##   ..- attr(*, "format.sas")= chr "$"}
-\NormalTok{  ##  $ TNCC    : atomic  0 0 0 0 ...}
+\NormalTok{  ##  $ TNCC    : chr  "0" "0" "0" "0" ...}
 \NormalTok{  ##   ..- attr(*, "label")= chr "TNCC"}
 \NormalTok{  ##   ..- attr(*, "format.sas")= chr "$"}
-\NormalTok{  ##  $ ARTMAJ  : atomic      ...}
+\NormalTok{  ##  $ ARTMAJ  : chr  "" "" "" "" ...}
 \NormalTok{  ##   ..- attr(*, "label")= chr "ARTMAJ"}
 \NormalTok{  ##   ..- attr(*, "format.sas")= chr "$"}
-\NormalTok{  ##  $ NCC     : atomic  BELLEY BOURG-EN-BRESSE GEX NANTUA ...}
+\NormalTok{  ##  $ NCC     : chr  "BELLEY" "BOURG-EN-BRESSE" "GEX" "NANTUA" ...}
 \NormalTok{  ##   ..- attr(*, "label")= chr "NCC"}
 \NormalTok{  ##   ..- attr(*, "format.sas")= chr "$"}
-\NormalTok{  ##  $ ARTMIN  : atomic      ...}
+\NormalTok{  ##  $ ARTMIN  : chr  "" "" "" "" ...}
 \NormalTok{  ##   ..- attr(*, "label")= chr "ARTMIN"}
 \NormalTok{  ##   ..- attr(*, "format.sas")= chr "$"}
-\NormalTok{  ##  $ NCCENR  : atomic  Belley Bourg-en-Bresse Gex Nantua ...}
+\NormalTok{  ##  $ NCCENR  : chr  "Belley" "Bourg-en-Bresse" "Gex" "Nantua" ...}
 \NormalTok{  ##   ..- attr(*, "label")= chr "NCCENR"}
 \NormalTok{  ##   ..- attr(*, "format.sas")= chr "$"}
 \NormalTok{  ##  - attr(*, "label")= chr "ARROND2017"}
 \KeywordTok{head}\NormalTok{(arrond)}
 \NormalTok{  ## # A tibble: 6 x 9}
-\NormalTok{  ##   REGION   DEP    AR CHEFLIEU  TNCC ARTMAJ             NCC}
-\NormalTok{  ##    <chr> <chr> <chr>    <chr> <chr>  <chr>           <chr>}
-\NormalTok{  ## 1     84    01     1    01034     0                 BELLEY}
-\NormalTok{  ## 2     84    01     2    01053     0        BOURG-EN-BRESSE}
-\NormalTok{  ## 3     84    01     3    01173     0                    GEX}
-\NormalTok{  ## 4     84    01     4    01269     0                 NANTUA}
-\NormalTok{  ## 5     32    02     1    02168     0        CHATEAU-THIERRY}
-\NormalTok{  ## 6     32    02     2    02408     0                   LAON}
-\NormalTok{  ## # ... with 2 more variables: ARTMIN <chr>, NCCENR <chr>}
+\NormalTok{  ##   REGION DEP   AR    CHEFLIEU TNCC  ARTMAJ NCC     ARTMIN NCCENR }
+\NormalTok{  ##   <chr>  <chr> <chr> <chr>    <chr> <chr>  <chr>   <chr>  <chr>  }
+\NormalTok{  ## 1 84     01    1     01034    0     ""     BELLEY  ""     Belley }
+\NormalTok{  ## 2 84     01    2     01053    0     ""     BOURG-~ ""     Bourg-~}
+\NormalTok{  ## 3 84     01    3     01173    0     ""     GEX     ""     Gex    }
+\NormalTok{  ## 4 84     01    4     01269    0     ""     NANTUA  ""     Nantua }
+\NormalTok{  ## 5 32     02    1     02168    0     ""     CHATEA~ ""     Châtea~}
+\NormalTok{  ## 6 32     02    2     02408    0     ""     LAON    ""     Laon}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Sauvegardez les objets \texttt{dep} et \texttt{arrond} dans le fichier
   \texttt{U:\textbackslash{}cog.RData} à l'aide de la fonction
@@ -1891,9 +1893,9 @@ données dans R et à les sauvegarder en format R natif.
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Supprimez l'ensemble des objets de l'environnement de travail puis
   rechargez les fichiers du COG en utilisant la fonction
@@ -1921,9 +1923,9 @@ données dans R et à les sauvegarder en format R natif.
   ## [1] "arrond" "dep"
 \end{verbatim}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
@@ -1953,7 +1955,7 @@ savoir \textbf{un fichier de données par fichier sur le disque}:
 \NormalTok{  ##  $ CHEFLIEU: Factor w/ 101 levels "01053","02408",..: 1 2 3 4 5 6 7 8 9 10 ...}
 \NormalTok{  ##  $ TNCC    : int  5 5 5 4 4 4 5 4 5 5 ...}
 \NormalTok{  ##  $ NCC     : Factor w/ 101 levels "AIN","AISNE",..: 1 2 3 4 45 5 6 7 8 9 ...}
-\NormalTok{  ##  $ NCCENR  : Factor w/ 101 levels "Ain","Aisne",..: 1 2 3 4 45 5 6 7 8 9 ...}
+\NormalTok{  ##  $ NCCENR  : Factor w/ 101 levels "Ain","Aisne",..: 1 2 3 4 46 5 6 7 8 9 ...}
 
 \CommentTok{# Comparaison de dep et de dep_bis}
 \KeywordTok{identical}\NormalTok{(dep, dep_bis)}
@@ -1971,8 +1973,11 @@ qui peuvent en résulter.
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
-\addtocontents{cp}{\vspace{\normalbaselineskip}}\chapter{Manipuler les éléments fondamentaux du langage}
- \minitoc
+\addtocontents{cp}{\vspace{\normalbaselineskip}}
+
+\chapter{Manipuler les éléments fondamentaux du langage}
+
+\minitoc 
 
 ~
 
@@ -1989,7 +1994,8 @@ mise en oeuvre autour de cas pratiques}.
 
 ~
 
-\#\#Les vecteurs : création et sélection
+\section{Les vecteurs : création et
+sélection}\label{les-vecteurs-creation-et-selection}
 
 Les vecteurs constituent un des types d'objets les plus simples et les
 plus courants dans R. \textbf{Ils interviennent dans la manipulation de
@@ -1999,7 +2005,8 @@ attention particulière.
 \textbf{Exemples} Les variables d'une table sont des vecteurs, tout
 comme la plupart des paramètres passés à une fonction.
 
-\#\#\#Créer des vecteurs et connaître leurs caractéristiques
+\subsection{Créer des vecteurs et connaître leurs
+caractéristiques}\label{creer-des-vecteurs-et-connaitre-leurs-caracteristiques}
 
 La \textbf{fonction \texttt{c()}}\index{\texttt{c}|textbf} permet de
 créer des vecteurs :
@@ -2160,7 +2167,7 @@ logique respectivement.
 \CommentTok{# Quand TRUE et FALSE ne sont pas écrits intégralement }
 \CommentTok{# en majuscules, des erreurs surviennent}
 \NormalTok{a7 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(True, fALSE, true,false)}
-\NormalTok{  ## Error in eval(expr, envir, enclos): object 'True' not found}
+\NormalTok{  ## Error in eval(expr, envir, enclos): objet 'True' introuvable}
 \CommentTok{# R recherche un objet dont le nom est `True` mais n'en }
 \CommentTok{# trouve aucun.}
 \end{Highlighting}
@@ -2237,10 +2244,9 @@ fois}\index{\texttt{rep}|textbf}.
 
 ~
 
-\hypertarget{cas-pratique-2.1-creer-des-vecteurs-et-connaitre-leurs-caracteristiques}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 2.1} Créer des
 vecteurs et connaître leurs
-caractéristiques}{Cas pratique 2.1 Créer des vecteurs et connaître leurs caractéristiques}}\label{cas-pratique-2.1-creer-des-vecteurs-et-connaitre-leurs-caracteristiques}}
+caractéristiques}{Cas pratique 2.1 Créer des vecteurs et connaître leurs caractéristiques}}\label{cas-pratique-2.1-creer-des-vecteurs-et-connaitre-leurs-caracteristiques}
 
 \addcontentsline{cp}{caspratique}{2.1 Créer des vecteurs et connaître leurs caractéristiques}
 
@@ -2300,7 +2306,7 @@ caractéristiques}{Cas pratique 2.1 Créer des vecteurs et connaître leurs cara
 \NormalTok{b5 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(b2, b4)}
 \CommentTok{# b5 est de type caractère et de longueur 7}
 \KeywordTok{str}\NormalTok{(b5)}
-\NormalTok{  ##  chr [1:7] "aaa" "bbb" "aaa" "bbb" "TRUE" ...}
+\NormalTok{  ##  chr [1:7] "aaa" "bbb" "aaa" "bbb" "TRUE" "FALSE" "FALSE"}
 \CommentTok{# Les deux vecteurs  b2 et b4 sont de type caractère}
 \CommentTok{# et respectivement de longueur 4 et 3}
 
@@ -2314,9 +2320,9 @@ caractéristiques}{Cas pratique 2.1 Créer des vecteurs et connaître leurs cara
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Utilisez la fonction \texttt{rep()}\index{\texttt{rep}} pour créer la
   séquence 1, 2, 1, 2. Utilisez de nouveau \texttt{rep()} pour créer la
@@ -2347,12 +2353,13 @@ caractéristiques}{Cas pratique 2.1 Créer des vecteurs et connaître leurs cara
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
-\#\#\#Extraire les éléments d'un vecteur
+\subsection{Extraire les éléments d'un
+vecteur}\label{extraire-les-elements-dun-vecteur}
 
 L'opérateur d'extraction \texttt{{[}} permet de sélectionner des
 éléments en utilisant leur \textbf{position dans le vecteur} :
@@ -2512,10 +2519,9 @@ elle que repose les \textbf{opérations de tri de tables de données}
 
 ~
 
-\hypertarget{cas-pratique-2.2-extraire-les-valeurs-dun-vecteur}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 2.2} Extraire les
 valeurs d'un
-vecteur}{Cas pratique 2.2 Extraire les valeurs d'un vecteur}}\label{cas-pratique-2.2-extraire-les-valeurs-dun-vecteur}}
+vecteur}{Cas pratique 2.2 Extraire les valeurs d'un vecteur}}\label{cas-pratique-2.2-extraire-les-valeurs-dun-vecteur}
 
 \addcontentsline{cp}{caspratique}{2.2 Extraire les valeurs d'un vecteur}
 
@@ -2554,9 +2560,9 @@ vecteur}{Cas pratique 2.2 Extraire les valeurs d'un vecteur}}\label{cas-pratique
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   On définit le vecteur logique \texttt{d2} nommé par
   \texttt{d2\ \textless{}-\ c("a"\ =\ TRUE,\ "b"\ =\ FALSE,\ "c"\ =\ FALSE,\ "d"\ =\ TRUE,\ "e"\ =\ TRUE)}.
@@ -2594,9 +2600,9 @@ vecteur}{Cas pratique 2.2 Extraire les valeurs d'un vecteur}}\label{cas-pratique
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Affichez le vecteur de noms associé au vecteur \texttt{d2} avec la
   fonction \texttt{names()}\index{\texttt{names}}. Quel est le type de
@@ -2627,9 +2633,9 @@ vecteur}{Cas pratique 2.2 Extraire les valeurs d'un vecteur}}\label{cas-pratique
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   (Optionnel) Que se passe-t-il quand vous saisissez
   \texttt{d2{[}c(2012,\ 2015){]}}\index{\texttt{[}}. Comment le
@@ -2670,16 +2676,18 @@ vecteur}{Cas pratique 2.2 Extraire les valeurs d'un vecteur}}\label{cas-pratique
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
 ~
 
-\#\#Les vecteurs : types et opérations
+\section{Les vecteurs : types et
+opérations}\label{les-vecteurs-types-et-operations}
 
-\#\#\#Manipuler des vecteurs logiques
+\subsection{Manipuler des vecteurs
+logiques}\label{manipuler-des-vecteurs-logiques}
 
 Les vecteurs logiques sont particulièrement importants dans la mesure où
 ils interviennent dans l'évaluation et l'utilisation
@@ -2892,10 +2900,9 @@ variables} dans une table de données (\emph{cf.} \emph{infra} et
 
 ~
 
-\hypertarget{cas-pratique-2.3-manipuler-des-vecteurs-logiques}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 2.3} Manipuler des
 vecteurs
-logiques}{Cas pratique 2.3 Manipuler des vecteurs logiques}}\label{cas-pratique-2.3-manipuler-des-vecteurs-logiques}}
+logiques}{Cas pratique 2.3 Manipuler des vecteurs logiques}}\label{cas-pratique-2.3-manipuler-des-vecteurs-logiques}
 
 \addcontentsline{cp}{caspratique}{2.3 Manipuler des vecteurs logiques}
 
@@ -2927,7 +2934,7 @@ logiques}{Cas pratique 2.3 Manipuler des vecteurs logiques}}\label{cas-pratique-
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{# Création du vecteur f1}
-\NormalTok{f1 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{-4}\NormalTok{, }\DecValTok{8}\NormalTok{)}
+\NormalTok{f1 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\OperatorTok{-}\DecValTok{4}\NormalTok{, }\DecValTok{8}\NormalTok{)}
 
 \CommentTok{# Evaluation des expressions logiques}
 \NormalTok{f1 }\OperatorTok{==}\StringTok{ }\DecValTok{2}
@@ -2949,9 +2956,9 @@ logiques}{Cas pratique 2.3 Manipuler des vecteurs logiques}}\label{cas-pratique-
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   On définit le vecteur
   \texttt{f2\ \textless{}-\ rep(c("a","b","a"),\ times\ =\ 10)}\index{\texttt{rep}}.
@@ -2993,12 +3000,13 @@ logiques}{Cas pratique 2.3 Manipuler des vecteurs logiques}}\label{cas-pratique-
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
-\#\#\#Manipuler des vecteurs numériques
+\subsection{Manipuler des vecteurs
+numériques}\label{manipuler-des-vecteurs-numeriques}
 
 Plusieurs fonctions sont spécifiquement utilisées pour générer des
 vecteurs de type numérique :
@@ -3105,8 +3113,8 @@ de la longueur du plus petit.
 \NormalTok{g4}
 \NormalTok{  ## [1] 1 2 3}
 \NormalTok{g1 }\OperatorTok{+}\StringTok{ }\NormalTok{g4}
-\NormalTok{  ## Warning in g1 + g4: longer object length is not a multiple of}
-\NormalTok{  ## shorter object length}
+\NormalTok{  ## Warning in g1 + g4: la taille d'un objet plus long n'est pas}
+\NormalTok{  ## multiple de la taille d'un objet plus court}
 \NormalTok{  ##  [1] 3 4 5 3 4 5 3 4 5 3}
 \end{Highlighting}
 \end{Shaded}
@@ -3160,10 +3168,9 @@ maximum du vecteur \texttt{v}\tabularnewline
 
 ~
 
-\hypertarget{cas-pratique-2.4-manipuler-des-vecteurs-numeriques}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 2.4} Manipuler des
 vecteurs
-numériques}{Cas pratique 2.4 Manipuler des vecteurs numériques}}\label{cas-pratique-2.4-manipuler-des-vecteurs-numeriques}}
+numériques}{Cas pratique 2.4 Manipuler des vecteurs numériques}}\label{cas-pratique-2.4-manipuler-des-vecteurs-numeriques}
 
 \addcontentsline{cp}{caspratique}{2.4 Manipuler des vecteurs numériques}
 
@@ -3193,9 +3200,9 @@ numériques}{Cas pratique 2.4 Manipuler des vecteurs numériques}}\label{cas-pra
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Générez un vecteur \texttt{h1} de longueur 20 tiré dans une loi
   uniforme sur {[}0;1{]}\index{\texttt{runif}}. Sélectionnez les
@@ -3242,9 +3249,9 @@ numériques}{Cas pratique 2.4 Manipuler des vecteurs numériques}}\label{cas-pra
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   En vous inspirant de la méthode utilisant la fonction \texttt{seq()}
   de la question précédente, construisez la fonction
@@ -3290,13 +3297,13 @@ numériques}{Cas pratique 2.4 Manipuler des vecteurs numériques}}\label{cas-pra
 
 \CommentTok{# Note : Ne fonctionne pas avec des vecteurs de longueur 1}
 \KeywordTok{elementsPairs}\NormalTok{(}\DecValTok{1}\NormalTok{)}
-\NormalTok{  ## Error in seq.default(2, length(x), by = 2): wrong sign in 'by' argument}
+\NormalTok{  ## Error in seq.default(2, length(x), by = 2): signe incorrect de l'argument 'by'}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Créez un vecteur \texttt{h2} de longueur 15 et tiré dans une loi
   normale centrée réduite\index{\texttt{rnorm}}. Déterminez sa valeur
@@ -3356,12 +3363,13 @@ numériques}{Cas pratique 2.4 Manipuler des vecteurs numériques}}\label{cas-pra
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
-\#\#\#Manipuler des vecteurs caractères
+\subsection{Manipuler des vecteurs
+caractères}\label{manipuler-des-vecteurs-caracteres}
 
 Comme pour les vecteurs de type numérique, il existe dans R des
 fonctions spécifiquement adaptées pour créer et manipuler des vecteurs
@@ -3470,13 +3478,11 @@ de type caractère :
 
 ~
 
-\hypertarget{cas-pratique-2.5-manipuler-des-vecteurs-caracteres-reconstituer-un-identifiant-de-fiche-adresse}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 2.5} Manipuler des
 vecteurs caractères : Reconstituer un identifiant de
-fiche-adresse}{Cas pratique 2.5 Manipuler des vecteurs caractères : Reconstituer un identifiant de fiche-adresse}}\label{cas-pratique-2.5-manipuler-des-vecteurs-caracteres-reconstituer-un-identifiant-de-fiche-adresse}}
+fiche-adresse}{Cas pratique 2.5 Manipuler des vecteurs caractères : Reconstituer un identifiant de fiche-adresse}}\label{cas-pratique-2.5-manipuler-des-vecteurs-caracteres-reconstituer-un-identifiant-de-fiche-adresse}
 
 \addcontentsline{cp}{caspratique}{2.5 Manipuler des vecteurs caractères : Reconstituer un identifiant de fiche-adresse}
-
 L'objectif de ce cas pratique est de \textbf{reconstituer un identifiant
 de fiche-adresse} (utilisé dans les enquêtes auprès des ménages de
 l'Insee) à partir de \textbf{trois informations} :
@@ -3537,9 +3543,9 @@ exemple, si \texttt{rges\ =\ 11}, \texttt{numfa\ =\ 1} et
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Utilisez la fonction \texttt{formatC()}\index{\texttt{formatC}} pour
   reformater correctement le vecteur \texttt{numfa}. Combinez les
@@ -3571,9 +3577,9 @@ exemple, si \texttt{rges\ =\ 11}, \texttt{numfa\ =\ 1} et
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Créez la fonction
   \texttt{creerIdentFA(rges,\ numfa,\ ssech)}\index{\texttt{function}}
@@ -3600,12 +3606,13 @@ exemple, si \texttt{rges\ =\ 11}, \texttt{numfa\ =\ 1} et
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
-\#\#\#Modifier la structure d'un vecteur
+\subsection{Modifier la structure d'un
+vecteur}\label{modifier-la-structure-dun-vecteur}
 
 Plusieurs fonctions sont susceptibles d'être appliquées à un vecteur
 pour modifier ses caractéristiques :
@@ -3720,13 +3727,11 @@ pour modifier ses caractéristiques :
 
 ~
 
-\hypertarget{cas-pratique-2.6-modifier-la-structure-dun-vecteur-travailler-avec-des-identifiants}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 2.6} Modifier la
 structure d'un vecteur : Travailler avec des
-identifiants}{Cas pratique 2.6 Modifier la structure d'un vecteur : Travailler avec des identifiants}}\label{cas-pratique-2.6-modifier-la-structure-dun-vecteur-travailler-avec-des-identifiants}}
+identifiants}{Cas pratique 2.6 Modifier la structure d'un vecteur : Travailler avec des identifiants}}\label{cas-pratique-2.6-modifier-la-structure-dun-vecteur-travailler-avec-des-identifiants}
 
 \addcontentsline{cp}{caspratique}{2.6 Modifier la structure d'un vecteur : Travailler avec des identifiants}
-
 L'objectif de ce cas pratique est d'utiliser les fonctions présentées
 dans cette sous-partie pour travailler efficacement avec des
 identifiants dans R. On définit les deux vecteurs suivants :
@@ -3790,9 +3795,9 @@ identifiants dans R. On définit les deux vecteurs suivants :
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Le vecteur \texttt{enq} comporte-t-il des valeurs en double ? Répondez
   en utilisant la fonction
@@ -3831,9 +3836,9 @@ identifiants dans R. On définit les deux vecteurs suivants :
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Proposez deux méthodes pour trier le vecteur \texttt{enq}, une qui
   utilise \texttt{sort()} et une qui utilise
@@ -3841,7 +3846,8 @@ identifiants dans R. On définit les deux vecteurs suivants :
 \end{enumerate}
 
 \ifsol 
- \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3870,15 +3876,17 @@ identifiants dans R. On définit les deux vecteurs suivants :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
- \bigskip 
- \fi
+\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\bigskip  \fi 
 
 ~
 
-\#\#Les vecteurs : aspects particuliers
+\section{Les vecteurs : aspects
+particuliers}\label{les-vecteurs-aspects-particuliers}
 
-\#\#\#Savoir traiter les valeurs spéciales
+\subsection{Savoir traiter les valeurs
+spéciales}\label{savoir-traiter-les-valeurs-speciales}
 
 R dispose de plusieurs \textbf{valeurs spéciales} qui interviennent dans
 des situations très différentes :
@@ -4039,7 +4047,8 @@ systématiquement l'opérateur \texttt{\%in\%}}\index{\texttt{\%in\%}}.
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
-\#\#\#Conversion de type et type facteur
+\subsection{Conversion de type et type
+facteur}\label{conversion-de-type-et-type-facteur}
 
 On a vu que quand c'est nécessaire, R modifie le type d'un vecteur pour
 s'adapter à de nouvelles données.
@@ -4090,7 +4099,7 @@ numérique.
 \CommentTok{# Conversion du département en numérique}
 \NormalTok{dep <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"75"}\NormalTok{, }\StringTok{"92"}\NormalTok{, }\StringTok{"93"}\NormalTok{, }\StringTok{"13"}\NormalTok{, }\StringTok{"2A"}\NormalTok{, }\StringTok{"2B"}\NormalTok{)}
 \KeywordTok{as.numeric}\NormalTok{(dep)}
-\NormalTok{  ## Warning: NAs introduced by coercion}
+\NormalTok{  ## Warning: NAs introduits lors de la conversion automatique}
 \NormalTok{  ## [1] 75 92 93 13 NA NA}
 \end{Highlighting}
 \end{Shaded}
@@ -4159,7 +4168,8 @@ de construction des objets de type \textbf{\texttt{data.frame}}
 
 ~
 
-\#\#Les matrices : création et sélection
+\section{Les matrices : création et
+sélection}\label{les-matrices-creation-et-selection}
 
 \textbf{Les matrices peuvent être vues comme le prolongement en deux
 dimensions des vecteurs} : si ce n'est l'existence de deux jeux de
@@ -4221,7 +4231,7 @@ fonctions \texttt{dim()}\index{\texttt{dim}|textbf},
 
 \CommentTok{# Caractéristiques de o1}
 \KeywordTok{str}\NormalTok{(o1)}
-\NormalTok{  ##  chr [1:3, 1:5] "a" "b" "c" "d" "e" "f" "g" ...}
+\NormalTok{  ##  chr [1:3, 1:5] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" ...}
 \KeywordTok{mode}\NormalTok{(o1)}
 \NormalTok{  ## [1] "character"}
 \KeywordTok{length}\NormalTok{(o1)}
@@ -4458,10 +4468,9 @@ pratique} (\emph{cf.} \underline{module 3}):
 
 ~
 
-\hypertarget{cas-pratique-2.7-creer-et-selectionner-les-elements-dune-matrice}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 2.7} Créer et
 sélectionner les éléments d'une
-matrice}{Cas pratique 2.7 Créer et sélectionner les éléments d'une matrice}}\label{cas-pratique-2.7-creer-et-selectionner-les-elements-dune-matrice}}
+matrice}{Cas pratique 2.7 Créer et sélectionner les éléments d'une matrice}}\label{cas-pratique-2.7-creer-et-selectionner-les-elements-dune-matrice}
 
 \addcontentsline{cp}{caspratique}{2.7 Créer et sélectionner les éléments d'une matrice}
 
@@ -4550,9 +4559,9 @@ matrice}{Cas pratique 2.7 Créer et sélectionner les éléments d'une matrice}}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   On définit la matrice
   \texttt{p5\ \textless{}-\ matrix(15:1,\ nrow\ =\ 3)}. Sélectionnez
@@ -4592,9 +4601,9 @@ matrice}{Cas pratique 2.7 Créer et sélectionner les éléments d'une matrice}}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Assignez les noms \texttt{c("Jacques",\ "Pierre",\ "Paul")} et
   \texttt{c("orange",\ "pomme",\ "poire",\ "banane",\ "abricot")} aux
@@ -4623,9 +4632,9 @@ matrice}{Cas pratique 2.7 Créer et sélectionner les éléments d'une matrice}}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   (Difficile) Utilisez la fonction
   \texttt{order()}\index{\texttt{order}} pour trier la matrice
@@ -4705,14 +4714,15 @@ matrice}{Cas pratique 2.7 Créer et sélectionner les éléments d'une matrice}}
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
 ~
 
-\#\#Les listes : création et sélection
+\section{Les listes : création et
+sélection}\label{les-listes-creation-et-selection}
 
 Du point de vue de la statistique appliquée, la principale limitation
 des matrices est qu'elles ne peuvent, comme les vecteurs, contenir qu'un
@@ -4941,7 +4951,7 @@ liste} :
 \CommentTok{# l'élément lui-même (ici un vecteur d'entiers)}
 
 \NormalTok{s1[[}\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{)]]}
-\NormalTok{  ## Error in s1[[c(2, 4)]]: subscript out of bounds}
+\NormalTok{  ## Error in s1[[c(2, 4)]]: indice hors limites}
 \CommentTok{# Note : [[ ne permet de sélectionner qu'un seul élément}
 \CommentTok{# à la fois.}
 
@@ -4996,10 +5006,9 @@ suffit de le sélectionner avec \texttt{{[}{[}} ou \texttt{\$}}.
 
 ~
 
-\hypertarget{cas-pratique-2.8-creer-et-selectionner-les-elements-dune-liste}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 2.8} Créer et
 sélectionner les éléments d'une
-liste}{Cas pratique 2.8 Créer et sélectionner les éléments d'une liste}}\label{cas-pratique-2.8-creer-et-selectionner-les-elements-dune-liste}}
+liste}{Cas pratique 2.8 Créer et sélectionner les éléments d'une liste}}\label{cas-pratique-2.8-creer-et-selectionner-les-elements-dune-liste}
 
 \addcontentsline{cp}{caspratique}{2.8 Créer et sélectionner les éléments d'une liste}
 
@@ -5053,9 +5062,9 @@ liste}{Cas pratique 2.8 Créer et sélectionner les éléments d'une liste}}\lab
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   On définit les objets suivants
   \texttt{t4\ \textless{}-\ rep(1:3,\ each\ =\ 4)},
@@ -5129,9 +5138,9 @@ liste}{Cas pratique 2.8 Créer et sélectionner les éléments d'une liste}}\lab
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   On définit la liste
   \texttt{t8\ \textless{}-\ list(matrix(1:6,\ nrow\ =\ 2),\ matrix(letters{[}1:6{]},\ ncol\ =\ 2))}.
@@ -5185,14 +5194,14 @@ liste}{Cas pratique 2.8 Créer et sélectionner les éléments d'une liste}}\lab
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
 ~
 
-\#\#Les listes : opérations
+\section{Les listes : opérations}\label{les-listes-operations}
 
 Comme pour les vecteurs, il est possible de manipuler des listes en
 utilisant la fonction \texttt{c()}\index{\texttt{c}} et les
@@ -5344,10 +5353,9 @@ liste}\index{\texttt{sapply}|textbf}.
 
 ~
 
-\hypertarget{cas-pratique-2.9-effectuer-des-operations-sur-les-listes}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 2.9} Effectuer des
 opérations sur les
-listes}{Cas pratique 2.9 Effectuer des opérations sur les listes}}\label{cas-pratique-2.9-effectuer-des-operations-sur-les-listes}}
+listes}{Cas pratique 2.9 Effectuer des opérations sur les listes}}\label{cas-pratique-2.9-effectuer-des-operations-sur-les-listes}
 
 \addcontentsline{cp}{caspratique}{2.9 Effectuer des opérations sur les listes}
 
@@ -5363,7 +5371,8 @@ listes}{Cas pratique 2.9 Effectuer des opérations sur les listes}}\label{cas-pr
 \end{enumerate}
 
 \ifsol 
- \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -5406,9 +5415,9 @@ listes}{Cas pratique 2.9 Effectuer des opérations sur les listes}}\label{cas-pr
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
- \bigskip 
- \fi
+\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\bigskip  \fi 
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -5423,7 +5432,8 @@ listes}{Cas pratique 2.9 Effectuer des opérations sur les listes}}\label{cas-pr
 \end{enumerate}
 
 \ifsol 
- \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -5464,13 +5474,13 @@ listes}{Cas pratique 2.9 Effectuer des opérations sur les listes}}\label{cas-pr
 
 \CommentTok{# Ici sapply() renvoie un vecteur de type caractère}
 \KeywordTok{str}\NormalTok{(}\KeywordTok{sapply}\NormalTok{(v3, mode))}
-\NormalTok{  ##  chr [1:4] "numeric" "character" "logical" ...}
+\NormalTok{  ##  chr [1:4] "numeric" "character" "logical" "character"}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
- \bigskip 
- \fi
+\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\bigskip  \fi 
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -5483,7 +5493,8 @@ listes}{Cas pratique 2.9 Effectuer des opérations sur les listes}}\label{cas-pr
 \end{enumerate}
 
 \ifsol 
- \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -5535,12 +5546,15 @@ listes}{Cas pratique 2.9 Effectuer des opérations sur les listes}}\label{cas-pr
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
- \bigskip 
- \fi
+\begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
-\addtocontents{cp}{\vspace{\normalbaselineskip}}\chapter{Travailler avec des données statistiques}
- \minitoc
+\bigskip  \fi 
+
+\addtocontents{cp}{\vspace{\normalbaselineskip}}
+
+\chapter{Travailler avec des données statistiques}
+
+\minitoc 
 
 ~
 
@@ -5569,7 +5583,8 @@ données multidimensionnelle, régression).
 
 ~
 
-\#\#Manipuler les \texttt{data.frame}
+\section{\texorpdfstring{Manipuler les
+\texttt{data.frame}}{Manipuler les data.frame}}\label{manipuler-les-data.frame}
 
 Dans R, la majeure partie des données statistiques se présente sous la
 forme de \textbf{\texttt{data.frame}} : ces objets permettent en effet
@@ -5578,7 +5593,8 @@ objet à deux dimensions) \textbf{des données de nature tant
 quantitative} (variables numériques) \textbf{que qualitative} (variables
 de type caractère ou facteur).
 
-\#\#\#Créer des data.frame et y sélectionner des éléments
+\subsection{Créer des data.frame et y sélectionner des
+éléments}\label{creer-des-data.frame-et-y-selectionner-des-elements}
 
 Pour créer un objet de type \texttt{data.frame}, il suffit
 d'\textbf{utiliser la fonction
@@ -5622,7 +5638,7 @@ d'\textbf{utiliser la fonction
   \DataTypeTok{var1 =} \DecValTok{1}\OperatorTok{:}\DecValTok{10}
 \NormalTok{  , }\DataTypeTok{var2 =} \DecValTok{1}\OperatorTok{:}\DecValTok{15}
 \NormalTok{)}
-\NormalTok{  ## Error in data.frame(var1 = 1:10, var2 = 1:15): arguments imply differing number of rows: 10, 15}
+\NormalTok{  ## Error in data.frame(var1 = 1:10, var2 = 1:15): les arguments impliquent des nombres de lignes différents : 10, 15}
 \end{Highlighting}
 \end{Shaded}
 
@@ -5885,10 +5901,9 @@ et inversement.
 
 ~
 
-\hypertarget{cas-pratique-3.1-selectionner-des-variables-et-des-observations-dans-une-table}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 3.1} Sélectionner
 des variables et des observations dans une
-table}{Cas pratique 3.1 Sélectionner des variables et des observations dans une table}}\label{cas-pratique-3.1-selectionner-des-variables-et-des-observations-dans-une-table}}
+table}{Cas pratique 3.1 Sélectionner des variables et des observations dans une table}}\label{cas-pratique-3.1-selectionner-des-variables-et-des-observations-dans-une-table}
 
 \addcontentsline{cp}{caspratique}{3.1 Sélectionner des variables et des observations dans une table}
 
@@ -5952,9 +5967,9 @@ première ou sixième interrogation. Ces données correspondent au fichier
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Pour simplifier le travail sur cette table, on souhaite normaliser la
   casse des noms de variable. Proposez une méthode pour passer
@@ -6014,9 +6029,9 @@ première ou sixième interrogation. Ces données correspondent au fichier
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   On souhaite créer deux nouvelles tables ne contenant que les variables
   sur lesquelles portent différents aspects de l'étude :
@@ -6048,23 +6063,22 @@ première ou sixième interrogation. Ces données correspondent au fichier
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     \texttt{eec3} qui contienne toutes les variables de \texttt{eec} à
     l'exception de \texttt{cse}.\index{\texttt{setdiff}}
 
-    \ifsol
-
-    \textbf{Indication} Comment utiliseriez-vous les opérations
+    \ifsol  \textbf{Indication} Comment utiliseriez-vous les opérations
     ensemblistes sur les vecteurs (\emph{cf.} module 2) pour créer le
     vecteur des noms des variables de la table \texttt{eec} SAUF
     \texttt{cse} ? Utilisez-le comme au i. pour sélectionner toutes les
     variables sauf \texttt{cse}.\fi 
 
     \ifsol 
-     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -6127,9 +6141,9 @@ première ou sixième interrogation. Ces données correspondent au fichier
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \end{enumerate}
 \item
   On souhaite désormais créer une nouvelle table \texttt{eec4} contenant
@@ -6192,12 +6206,13 @@ première ou sixième interrogation. Ces données correspondent au fichier
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
-\#\#\#Créer ou modifier des variables dans un \texttt{data.frame}
+\subsection{\texorpdfstring{Créer ou modifier des variables dans un
+\texttt{data.frame}}{Créer ou modifier des variables dans un data.frame}}\label{creer-ou-modifier-des-variables-dans-un-data.frame}
 
 Pour créer une nouvelle variable dans un \texttt{data.frame}, \textbf{le
 plus simple est d'utiliser l'opérateur \texttt{\$}}. \index{\texttt{\$}}
@@ -6363,9 +6378,8 @@ plus d'une instruction).
 
 ~
 
-\hypertarget{cas-pratique-3.2-recoder-des-variables}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 3.2} Recoder des
-variables}{Cas pratique 3.2 Recoder des variables}}\label{cas-pratique-3.2-recoder-des-variables}}
+variables}{Cas pratique 3.2 Recoder des variables}}\label{cas-pratique-3.2-recoder-des-variables}
 
 \addcontentsline{cp}{caspratique}{3.2 Recoder des variables}
 
@@ -6446,15 +6460,16 @@ l'enquête Emploi en continu au 2015T4.
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Effectuez le même recodage en utilisant la fonction
     \texttt{substr()}.\index{\texttt{substr}|textbf}
 
     \ifsol 
-     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -6473,9 +6488,9 @@ l'enquête Emploi en continu au 2015T4.
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \end{enumerate}
 \item
   La variable de position sur le marché du travail (\texttt{acteu})
@@ -6559,16 +6574,17 @@ l'enquête Emploi en continu au 2015T4.
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Dans la table \texttt{eec}, créez la variable redressée
     \texttt{acteu\_red} en mettant en oeuvre la procédure d'imputation
     (très frustre) décrite ci-dessus.
 
     \ifsol 
-     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -6585,37 +6601,38 @@ l'enquête Emploi en continu au 2015T4.
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Recréez la table \texttt{eec\_pb} et contrôlez que l'imputation
     s'est déroulée correctement (en vérifiant que les valeurs imputées
     sont cohérentes avec l'âge des individus).
+
+    \ifsol 
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Re-création de la table eec_pb et contrôle}
+\CommentTok{# des valeurs de acteu_red}
+\NormalTok{eec_pb <-}\StringTok{ }\NormalTok{eec[}\KeywordTok{is.na}\NormalTok{(eec}\OperatorTok{$}\NormalTok{acteu), ]}
+\KeywordTok{head}\NormalTok{(eec_pb[, }\KeywordTok{c}\NormalTok{(}\StringTok{"age"}\NormalTok{, }\StringTok{"acteu"}\NormalTok{, }\StringTok{"acteu_red"}\NormalTok{)])}
+\NormalTok{  ##        age acteu acteu_red}
+\NormalTok{  ## 316001  33  <NA>         1}
+\NormalTok{  ## 316013  47  <NA>         1}
+\NormalTok{  ## 316464  55  <NA>         1}
+\NormalTok{  ## 318522  28  <NA>         1}
+\NormalTok{  ## 318700  85  <NA>         3}
+\NormalTok{  ## 319625  47  <NA>         1}
+\end{Highlighting}
+\end{Shaded}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \end{enumerate}
-
-\begin{verbatim}
- \ifsol 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-
- ```r
- # Re-création de la table eec_pb et contrôle
- # des valeurs de acteu_red
- eec_pb <- eec[is.na(eec$acteu), ]
- head(eec_pb[, c("age", "acteu", "acteu_red")])
-   ##        age acteu acteu_red
-   ## 316001  33  <NA>         1
-   ## 316013  47  <NA>         1
-   ## 316464  55  <NA>         1
-   ## 318522  28  <NA>         1
-   ## 318700  85  <NA>         3
-   ## 319625  47  <NA>         1
- ```
-
-   \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-  \bigskip 
-  \fi 
-\end{verbatim}
 \item
   Le vecteur de poids de l'enquête (variable \texttt{extri1613})
   présente des valeurs extrêmes relativement élevées. Afin d'éviter que
@@ -6650,16 +6667,17 @@ l'enquête Emploi en continu au 2015T4.
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Récupérer la valeur du 99ème percentile et utilisez-la pour créer
     une nouvelle pondération (\texttt{newpond}) dans laquelle les poids
     ont été \enquote{rabotés} à son niveau.
 
     \ifsol 
-     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -6674,17 +6692,18 @@ l'enquête Emploi en continu au 2015T4.
 \CommentTok{# Caractéristiques générales de newpond}
 \KeywordTok{summary}\NormalTok{(eec}\OperatorTok{$}\NormalTok{newpond)}
 \NormalTok{  ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. }
-\NormalTok{  ##   156.4  1088.0  1335.0  1419.0  1637.0  3959.0}
+\NormalTok{  ##   156.4  1088.2  1334.6  1419.0  1636.8  3958.6}
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \end{enumerate}
 \end{enumerate}
 
-\#\#\#Modifier la structure d'un \texttt{data.frame}
+\subsection{\texorpdfstring{Modifier la structure d'un
+\texttt{data.frame}}{Modifier la structure d'un data.frame}}\label{modifier-la-structure-dun-data.frame}
 
 Comme pour les vecteurs ou les matrices, plusieurs opérations permettent
 de \textbf{modifier la structure d'un \texttt{data.frame}} :
@@ -6866,7 +6885,7 @@ de \textbf{modifier la structure d'un \texttt{data.frame}} :
 \CommentTok{# Note : il faut que les deux data.frame aient exactement}
 \CommentTok{# les mêmes variables avec le même nom pour que cela fonctionne}
 \KeywordTok{rbind}\NormalTok{(df6, df7[, }\KeywordTok{c}\NormalTok{(}\StringTok{"var1"}\NormalTok{, }\StringTok{"var3"}\NormalTok{)])}
-\NormalTok{  ## Error in rbind(deparse.level, ...): numbers of columns of arguments do not match}
+\NormalTok{  ## Error in rbind(deparse.level, ...): les nombres de colonnes des arguments ne correspondent pas}
 \end{Highlighting}
 \end{Shaded}
 
@@ -6973,10 +6992,9 @@ qu'\textbf{il n'est pas indispensable qu'elles aient le même nom}.
 
 ~
 
-\hypertarget{cas-pratique-3.3-modifier-la-structure-de-donnees-statistiques}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 3.3} Modifier la
 structure de données
-statistiques}{Cas pratique 3.3 Modifier la structure de données statistiques}}\label{cas-pratique-3.3-modifier-la-structure-de-donnees-statistiques}}
+statistiques}{Cas pratique 3.3 Modifier la structure de données statistiques}}\label{cas-pratique-3.3-modifier-la-structure-de-donnees-statistiques}
 
 \addcontentsline{cp}{caspratique}{3.3 Modifier la structure de données statistiques}
 
@@ -7011,17 +7029,15 @@ statistiques}{Cas pratique 3.3 Modifier la structure de données statistiques}}\
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     On cherche d'abord à constituer une table ne comportant qu'un seul
     individu par ménage, quel que soit son âge. Comment procéderiez-vous
     ?\index{\texttt{duplicated}}
 
-    \ifsol
-
-    \textbf{Indication} Pensez à utiliser la fonction
+    \ifsol  \textbf{Indication} Pensez à utiliser la fonction
     \texttt{duplicated()}.\fi  \ifsol 
 
     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
@@ -7072,93 +7088,86 @@ statistiques}{Cas pratique 3.3 Modifier la structure de données statistiques}}\
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Comment adapteriez-vous la réponse à la question précédente pour
     sélectionner l'individu le plus âgé du ménage (sans chercher à
     maîtriser celui qui est sélectionné quand plusieurs membres d'un
     même ménage ont le même âge) ?\index{\texttt{order}}
-  \end{enumerate}
 
-\begin{verbatim}
- \ifsol 
- **Indication** Pensez à trier judicieusement la table avec `order()`.\fi 
- \ifsol 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
+    \ifsol  \textbf{Indication} Pensez à trier judicieusement la table
+    avec \texttt{order()}.\fi  \ifsol 
 
- ```r
- # duplicated() procède sur le vecteur des identifiant
- # tel qu'il est trié dans la base eec
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
- # En triant la base eec judicieusement, il est possible
- # de déterminer quel individu du ménage est conservé dans
- # la table eec5.
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# duplicated() procède sur le vecteur des identifiant}
+\CommentTok{# tel qu'il est trié dans la base eec}
 
- # En l'occurrence, il suffit de trier la table eec :
- # - par ménage
- # - PUIS par âge décroissant
+\CommentTok{# En triant la base eec judicieusement, il est possible}
+\CommentTok{# de déterminer quel individu du ménage est conservé dans}
+\CommentTok{# la table eec5.}
 
- # Pour mener à bien le tri, on utilise la fonction order() : 
- # - permutation pour trier par identifiant
- str(order(eec$ident))
-   ##  int [1:34913] 1 2 3 4 5 6 7 8 9 10 ...
- # - permutation pour trier par identifiant puis par âge
- str(order(eec$ident, eec$age))
-   ##  int [1:34913] 2 1 3 4 5 6 8 7 9 10 ...
- # - permutation pour trier par identifiant puis par âge décroissant
- str(order(eec$ident, - eec$age))
-   ## Error in -eec$age: invalid argument to unary operator
+\CommentTok{# En l'occurrence, il suffit de trier la table eec :}
+\CommentTok{# - par ménage}
+\CommentTok{# - PUIS par âge décroissant}
 
- # Note : On utilise ici str() afin que le vecteur logique
- # ne s'affiche pas en entier (il compte plus de 30 000 éléments !)
+\CommentTok{# Pour mener à bien le tri, on utilise la fonction order() : }
+\CommentTok{# - permutation pour trier par identifiant}
+\KeywordTok{str}\NormalTok{(}\KeywordTok{order}\NormalTok{(eec}\OperatorTok{$}\NormalTok{ident))}
+\NormalTok{  ##  int [1:34913] 1 2 3 4 5 6 7 8 9 10 ...}
+\CommentTok{# - permutation pour trier par identifiant puis par âge}
+\KeywordTok{str}\NormalTok{(}\KeywordTok{order}\NormalTok{(eec}\OperatorTok{$}\NormalTok{ident, eec}\OperatorTok{$}\NormalTok{age))}
+\NormalTok{  ##  int [1:34913] 2 1 3 4 5 6 8 7 9 10 ...}
+\CommentTok{# - permutation pour trier par identifiant puis par âge décroissant}
+\KeywordTok{str}\NormalTok{(}\KeywordTok{order}\NormalTok{(eec}\OperatorTok{$}\NormalTok{ident, }\OperatorTok{-}\StringTok{ }\NormalTok{eec}\OperatorTok{$}\NormalTok{age))}
+\NormalTok{  ## Error in -eec$age: argument incorrect pour un opérateur unitaire}
 
- # Le dernier appel de la fonction order() produit une erreur : 
- # la variable age étant de type caractère, l'opérateur -
- # ne peut lui être appliqué. 
- # Pour ce faire, il suffit de convertir la variable 
- # age au préalable en vecteur de type numérique
- str(order(eec$ident, - as.numeric(eec$age)))
-   ##  int [1:34913] 1 2 3 4 5 6 7 8 9 10 ...
+\CommentTok{# Note : On utilise ici str() afin que le vecteur logique}
+\CommentTok{# ne s'affiche pas en entier (il compte plus de 30 000 éléments !)}
 
- # On peut donc procéder au tri en tant que tel :
- eec <- eec[order(eec$ident, - as.numeric(eec$age)), ]
- eec[1:10, c("ident", "age")]
-   ##           ident age
-   ## 315164 G0A56JP6  66
-   ## 315165 G0A56JP6  29
-   ## 315166 G0A56JR6  27
-   ## 315167 G0A56JS6  29
-   ## 315168 G0A56JT6  31
-   ## 315169 G0A56JU6  24
-   ## 315170 G0A56JV6  27
-   ## 315171 G0A56JV6  25
-   ## 315172 G0A56JW6  35
-   ## 315173 G0A56JX6  31
- # Il semble bien que la table soit triée par ident puis par âge décroissant.
+\CommentTok{# Le dernier appel de la fonction order() produit une erreur : }
+\CommentTok{# la variable age étant de type caractère, l'opérateur -}
+\CommentTok{# ne peut lui être appliqué. }
+\CommentTok{# Pour ce faire, il suffit de convertir la variable }
+\CommentTok{# age au préalable en vecteur de type numérique}
+\KeywordTok{str}\NormalTok{(}\KeywordTok{order}\NormalTok{(eec}\OperatorTok{$}\NormalTok{ident, }\OperatorTok{-}\StringTok{ }\KeywordTok{as.numeric}\NormalTok{(eec}\OperatorTok{$}\NormalTok{age)))}
+\NormalTok{  ##  int [1:34913] 1 2 3 4 5 6 7 8 9 10 ...}
 
- # Il ne reste plus qu'à utiliser la même méthode 
- # qu'à la question précédente :
- eec5 <- eec[!duplicated(eec$ident), ]
- ```
+\CommentTok{# On peut donc procéder au tri en tant que tel :}
+\NormalTok{eec <-}\StringTok{ }\NormalTok{eec[}\KeywordTok{order}\NormalTok{(eec}\OperatorTok{$}\NormalTok{ident, }\OperatorTok{-}\StringTok{ }\KeywordTok{as.numeric}\NormalTok{(eec}\OperatorTok{$}\NormalTok{age)), ]}
+\NormalTok{eec[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"ident"}\NormalTok{, }\StringTok{"age"}\NormalTok{)]}
+\NormalTok{  ##           ident age}
+\NormalTok{  ## 315164 G0A56JP6  66}
+\NormalTok{  ## 315165 G0A56JP6  29}
+\NormalTok{  ## 315166 G0A56JR6  27}
+\NormalTok{  ## 315167 G0A56JS6  29}
+\NormalTok{  ## 315168 G0A56JT6  31}
+\NormalTok{  ## 315169 G0A56JU6  24}
+\NormalTok{  ## 315170 G0A56JV6  27}
+\NormalTok{  ## 315171 G0A56JV6  25}
+\NormalTok{  ## 315172 G0A56JW6  35}
+\NormalTok{  ## 315173 G0A56JX6  31}
+\CommentTok{# Il semble bien que la table soit triée par ident puis par âge décroissant.}
 
-   \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-  \bigskip 
-  \fi 
-\end{verbatim}
+\CommentTok{# Il ne reste plus qu'à utiliser la même méthode }
+\CommentTok{# qu'à la question précédente :}
+\NormalTok{eec5 <-}\StringTok{ }\NormalTok{eec[}\OperatorTok{!}\KeywordTok{duplicated}\NormalTok{(eec}\OperatorTok{$}\NormalTok{ident), ]}
+\end{Highlighting}
+\end{Shaded}
 
-  \begin{enumerate}
-  \def\labelenumii{\roman{enumii}.}
-  \setcounter{enumii}{3}
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     (Optionnel) Comment adapteriez-vous la réponse à la question
     précédente pour effectuer un tirage au sort quand plusieurs membres
     d'un même ménage ont le même âge ?\index{\texttt{rnorm}}
 
-    \ifsol
-
-    \textbf{Indication} Pensez à utiliser une variable aléatoire
+    \ifsol  \textbf{Indication} Pensez à utiliser une variable aléatoire
     (générée par exemple avec \texttt{rnorm()} ou \texttt{runif()}) dans
     la fonction \texttt{order()}.\fi  \ifsol 
 
@@ -7210,9 +7219,9 @@ statistiques}{Cas pratique 3.3 Modifier la structure de données statistiques}}\
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \end{enumerate}
 \item
   Retour sur les PCS. Entre le niveau de la variable \texttt{cse}
@@ -7265,20 +7274,18 @@ statistiques}{Cas pratique 3.3 Modifier la structure de données statistiques}}\
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Utilisez la fonction \texttt{merge()}\index{\texttt{merge}} pour
     fusionner cette table de passage avec le fichier \texttt{eec} et
     créer une nouvelle table (\texttt{eec6}) contenant une variable
     supplémentaire correspondant au niveau 2 de la PCS.
 
-    \ifsol
-
-    \textbf{Indication} Prenez garde au type des variables de fusion
-    (qui doit être identique), ainsi qu'au nombre d'observations dans la
-    table de départ et la table d'arrivée.\fi  \ifsol 
+    \ifsol  \textbf{Indication} Prenez garde au type des variables de
+    fusion (qui doit être identique), ainsi qu'au nombre d'observations
+    dans la table de départ et la table d'arrivée.\fi  \ifsol 
 
     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
@@ -7320,9 +7327,9 @@ statistiques}{Cas pratique 3.3 Modifier la structure de données statistiques}}\
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     (Difficile) À partir de la table de passage agrégée à la
     sous-question i., créez le vecteur \texttt{n2} dont les éléments
@@ -7330,73 +7337,74 @@ statistiques}{Cas pratique 3.3 Modifier la structure de données statistiques}}\
     de la variable N3. Comment pourriez-vous utiliser ce vecteur pour
     obtenir le même résultat qu'à la question ii.
     ?\index{\texttt{na.omit}|textbf}
+
+    \ifsol  \textbf{Indication} Comparez \texttt{eec\$cse{[}1:10{]}} et
+    \texttt{n2{[}eec\$cse{[}1:10{]}{]}}.\fi  \ifsol 
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Construction du vecteur n2}
+\NormalTok{n2 <-}\StringTok{ }\NormalTok{passage}\OperatorTok{$}\NormalTok{N2}
+\KeywordTok{names}\NormalTok{(n2) <-}\StringTok{ }\NormalTok{passage}\OperatorTok{$}\NormalTok{N3}
+\KeywordTok{str}\NormalTok{(n2)}
+\NormalTok{  ##  Named chr [1:42] "10" "10" "10" "21" "22" "23" "31" "32" ...}
+\NormalTok{  ##  - attr(*, "names")= chr [1:42] "11" "12" "13" "21" ...}
+\NormalTok{n2[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{]}
+\NormalTok{  ##   11   12   13   21   22   23   31   33   34   35 }
+\NormalTok{  ## "10" "10" "10" "21" "22" "23" "31" "32" "32" "32"}
+
+\CommentTok{# Remarque : on peut faire les deux opérations d'un seul }
+\CommentTok{# coup avec la fonction setNames()}
+\NormalTok{n2 <-}\StringTok{ }\KeywordTok{setNames}\NormalTok{(passage}\OperatorTok{$}\NormalTok{N2, passage}\OperatorTok{$}\NormalTok{N3)}
+
+\CommentTok{# Comme proposé, on compare eec$cse[1:10] et n2[eec$cse[1:10]]}
+\NormalTok{eec}\OperatorTok{$}\NormalTok{cse[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{]}
+\NormalTok{  ##  [1] "56" "81" "38" "37" "37" NA   "46" "37" "37" "38"}
+\NormalTok{n2[eec}\OperatorTok{$}\NormalTok{cse[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{]]}
+\NormalTok{  ##   56   81   38   37   37 <NA>   46   37   37   38 }
+\NormalTok{  ## "56" "81" "36" "36" "36"   NA "46" "36" "36" "36"}
+\CommentTok{# Les deux vecteurs se ressemblent avec quelques différences : }
+\CommentTok{# - le premier est un vecteur dont les éléments sont les valeurs}
+\CommentTok{# de la PCS au niveau 3 pour les 10 premiers individus de la base}
+\CommentTok{# - le second est un vecteur dont les noms sont les valeurs }
+\CommentTok{# de la PCS au niveau 3 et dont les éléments sont les valeurs }
+\CommentTok{# de la PCS au niveau 2 pour les 10 premiers individus de la base.}
+
+\CommentTok{# Un exemple plus simple : }
+\NormalTok{aConvertir <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"b"}\NormalTok{, }\StringTok{"d"}\NormalTok{, }\StringTok{"a"}\NormalTok{, }\StringTok{"e"}\NormalTok{, }\StringTok{"a"}\NormalTok{, }\StringTok{"f"}\NormalTok{)}
+\NormalTok{aConvertir}
+\NormalTok{  ## [1] "b" "d" "a" "e" "a" "f"}
+\NormalTok{corresp <-}\StringTok{ }\KeywordTok{setNames}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{3}\NormalTok{, }\DataTypeTok{each =} \DecValTok{2}\NormalTok{), letters[}\DecValTok{1}\OperatorTok{:}\DecValTok{6}\NormalTok{])}
+\NormalTok{corresp}
+\NormalTok{  ## a b c d e f }
+\NormalTok{  ## 1 1 2 2 3 3}
+\NormalTok{corresp[aConvertir]}
+\NormalTok{  ## b d a e a f }
+\NormalTok{  ## 1 2 1 3 1 3}
+
+\CommentTok{# Pour revenir à la question : il suffit alors d'utiliser}
+\CommentTok{# le vecteur n2[eec6$cse] pour créer directement la variable}
+\CommentTok{# convertie dans la table eec6}
+\NormalTok{eec6}\OperatorTok{$}\NormalTok{N2_bis <-}\StringTok{ }\NormalTok{n2[eec6}\OperatorTok{$}\NormalTok{cse]}
+\KeywordTok{identical}\NormalTok{(eec6}\OperatorTok{$}\NormalTok{N2, eec6}\OperatorTok{$}\NormalTok{N2_bis)}
+\NormalTok{  ## [1] TRUE}
+
+\CommentTok{# Cette méthode, beaucoup plus efficace que celle du ii., }
+\CommentTok{# est présentée plus en détails dans la formation }
+\CommentTok{# perfectionnement.}
+\end{Highlighting}
+\end{Shaded}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \end{enumerate}
-
-\begin{verbatim}
- \ifsol 
- **Indication** Comparez `eec$cse[1:10]` et `n2[eec$cse[1:10]]`.\fi 
- \ifsol 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-
- ```r
- # Construction du vecteur n2
- n2 <- passage$N2
- names(n2) <- passage$N3
- str(n2)
-   ##  Named chr [1:42] "10" "10" "10" "21" "22" "23" ...
-   ##  - attr(*, "names")= chr [1:42] "11" "12" "13" "21" ...
- n2[1:10]
-   ##   11   12   13   21   22   23   31   33   34   35 
-   ## "10" "10" "10" "21" "22" "23" "31" "32" "32" "32"
-
- # Remarque : on peut faire les deux opérations d'un seul 
- # coup avec la fonction setNames()
- n2 <- setNames(passage$N2, passage$N3)
-
- # Comme proposé, on compare eec$cse[1:10] et n2[eec$cse[1:10]]
- eec$cse[1:10]
-   ##  [1] "56" "81" "38" "37" "37" NA   "46" "37" "37" "38"
- n2[eec$cse[1:10]]
-   ##   56   81   38   37   37 <NA>   46   37   37   38 
-   ## "56" "81" "36" "36" "36"   NA "46" "36" "36" "36"
- # Les deux vecteurs se ressemblent avec quelques différences : 
- # - le premier est un vecteur dont les éléments sont les valeurs
- # de la PCS au niveau 3 pour les 10 premiers individus de la base
- # - le second est un vecteur dont les noms sont les valeurs 
- # de la PCS au niveau 3 et dont les éléments sont les valeurs 
- # de la PCS au niveau 2 pour les 10 premiers individus de la base.
-
- # Un exemple plus simple : 
- aConvertir <- c("b", "d", "a", "e", "a", "f")
- aConvertir
-   ## [1] "b" "d" "a" "e" "a" "f"
- corresp <- setNames(rep(1:3, each = 2), letters[1:6])
- corresp
-   ## a b c d e f 
-   ## 1 1 2 2 3 3
- corresp[aConvertir]
-   ## b d a e a f 
-   ## 1 2 1 3 1 3
-
- # Pour revenir à la question : il suffit alors d'utiliser
- # le vecteur n2[eec6$cse] pour créer directement la variable
- # convertie dans la table eec6
- eec6$N2_bis <- n2[eec6$cse]
- identical(eec6$N2, eec6$N2_bis)
-   ## [1] TRUE
-
- # Cette méthode, beaucoup plus efficace que celle du ii., 
- # est présentée plus en détails dans la formation 
- # perfectionnement.
- ```
-
-   \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-  \bigskip 
-  \fi 
-\end{verbatim}
 \end{enumerate}
 
-\#\#\#Effectuer des calculs sur un \texttt{data.frame}
+\subsection{\texorpdfstring{Effectuer des calculs sur un
+\texttt{data.frame}}{Effectuer des calculs sur un data.frame}}\label{effectuer-des-calculs-sur-un-data.frame}
 
 La proximité des \texttt{data.frame} avec les listes se retrouve dans le
 \textbf{type d'opérations qu'il est possible de leur appliquer} : comme
@@ -7566,16 +7574,16 @@ Plusieurs fonctions de R permettent de mener à bien ce type d'opération
 
 \begin{verbatim}
   ## Unit: microseconds
-  ##       expr      min        lq      mean   median       uq
-  ##  aggregate 1048.785 1095.7580 1192.5485 1134.836 1192.465
-  ##     sapply  556.958  579.4580  624.2121  591.299  606.496
-  ##     tapply  192.232  205.6525  224.3120  217.889  225.389
-  ##    sapply2  162.233  170.5220  179.5296  174.864  181.969
-  ##        max neval
-  ##  10402.984  1000
-  ##   5644.572  1000
-  ##   4296.585  1000
-  ##    478.013  1000
+  ##       expr     min       lq       mean   median       uq
+  ##  aggregate 684.974 722.5745   873.9465 756.2450 869.9590
+  ##     sapply 340.460 369.7560 17049.8104 385.3405 452.5160
+  ##     tapply 119.828 137.5780   164.3551 147.6650 168.5725
+  ##    sapply2  96.737 107.0505   464.7128 115.4565 131.1520
+  ##          max neval
+  ##     6070.886  1000
+  ##  6432198.401  1000
+  ##      775.506  1000
+  ##   336963.735  1000
 \end{verbatim}
 
 \begin{enumerate}
@@ -7594,10 +7602,9 @@ Plusieurs fonctions de R permettent de mener à bien ce type d'opération
 
 ~
 
-\hypertarget{cas-pratique-3.4-effectuer-des-manipulations-complexes-sur-des-donnees-statistiques}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 3.4} Effectuer des
 manipulations complexes sur des données
-statistiques}{Cas pratique 3.4 Effectuer des manipulations complexes sur des données statistiques}}\label{cas-pratique-3.4-effectuer-des-manipulations-complexes-sur-des-donnees-statistiques}}
+statistiques}{Cas pratique 3.4 Effectuer des manipulations complexes sur des données statistiques}}\label{cas-pratique-3.4-effectuer-des-manipulations-complexes-sur-des-donnees-statistiques}
 
 \addcontentsline{cp}{caspratique}{3.4 Effectuer des manipulations complexes sur des données statistiques}
 
@@ -7651,9 +7658,9 @@ statistiques}{Cas pratique 3.4 Effectuer des manipulations complexes sur des don
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Utilisez les fonctions
     \texttt{aggregate()}\index{\texttt{aggregate}},
@@ -7664,7 +7671,8 @@ statistiques}{Cas pratique 3.4 Effectuer des manipulations complexes sur des don
     \texttt{reg}).
 
     \ifsol 
-     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7736,47 +7744,48 @@ statistiques}{Cas pratique 3.4 Effectuer des manipulations complexes sur des don
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Utilisez la fonction \texttt{sapply()}\index{\texttt{sapply}} avec
     \texttt{split()}\index{\texttt{split}} pour calculer un taux de
     chômage pondéré et par région.
+
+    \ifsol 
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Pour pondérer le calcul du taux de chômage, il faut}
+\CommentTok{# pouvoir appliquer la fonction de calcul à deux éléments : }
+\CommentTok{# la valeur de la variable acteu et la pondération extri1613.}
+
+\CommentTok{# Or les fonctions aggregate() et tapply() ne portent }
+\CommentTok{# que sur des vecteurs et ne conviennent donc pas.}
+\CommentTok{# On se limite donc à la méthode avec sapply() et split(). }
+\KeywordTok{sapply}\NormalTok{(}\KeywordTok{split}\NormalTok{(eec, eec}\OperatorTok{$}\NormalTok{reg), }\ControlFlowTok{function}\NormalTok{(x)\{}
+  \KeywordTok{sum}\NormalTok{((x}\OperatorTok{$}\NormalTok{acteu }\OperatorTok{%in%}\StringTok{ "2"}\NormalTok{) }\OperatorTok{*}\StringTok{ }\NormalTok{x}\OperatorTok{$}\NormalTok{extri1613, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{) }\OperatorTok{/}\StringTok{ }
+\StringTok{    }\KeywordTok{sum}\NormalTok{((x}\OperatorTok{$}\NormalTok{acteu }\OperatorTok{%in%}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"1"}\NormalTok{, }\StringTok{"2"}\NormalTok{)) }\OperatorTok{*}\StringTok{ }\NormalTok{x}\OperatorTok{$}\NormalTok{extri1613, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{\})}
+\NormalTok{  ##         11         21         22         23         24 }
+\NormalTok{  ## 0.09799410 0.10902296 0.13996041 0.13407322 0.11443175 }
+\NormalTok{  ##         25         26         31         41         42 }
+\NormalTok{  ## 0.09876409 0.10016586 0.14881667 0.16226981 0.09831550 }
+\NormalTok{  ##         43         52         53         54         72 }
+\NormalTok{  ## 0.11146691 0.08739635 0.08845711 0.11341163 0.08924882 }
+\NormalTok{  ##         73         74         82         83         91 }
+\NormalTok{  ## 0.06535967 0.06359372 0.09318913 0.12422405 0.19206955 }
+\NormalTok{  ##         93         94 }
+\NormalTok{  ## 0.11484820 0.10609290}
+\end{Highlighting}
+\end{Shaded}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \end{enumerate}
-
-\begin{verbatim}
- \ifsol 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-
- ```r
- # Pour pondérer le calcul du taux de chômage, il faut
- # pouvoir appliquer la fonction de calcul à deux éléments : 
- # la valeur de la variable acteu et la pondération extri1613.
-
- # Or les fonctions aggregate() et tapply() ne portent 
- # que sur des vecteurs et ne conviennent donc pas.
- # On se limite donc à la méthode avec sapply() et split(). 
- sapply(split(eec, eec$reg), function(x){
-   sum((x$acteu %in% "2") * x$extri1613, na.rm = TRUE) / 
-     sum((x$acteu %in% c("1", "2")) * x$extri1613, na.rm = TRUE)
- })
-   ##         11         21         22         23         24 
-   ## 0.09799410 0.10902296 0.13996041 0.13407322 0.11443175 
-   ##         25         26         31         41         42 
-   ## 0.09876409 0.10016586 0.14881667 0.16226981 0.09831550 
-   ##         43         52         53         54         72 
-   ## 0.11146691 0.08739635 0.08845711 0.11341163 0.08924882 
-   ##         73         74         82         83         91 
-   ## 0.06535967 0.06359372 0.09318913 0.12422405 0.19206955 
-   ##         93         94 
-   ## 0.11484820 0.10609290
- ```
-
-   \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-  \bigskip 
-  \fi 
-\end{verbatim}
 \item
   Pour des raisons de stockage et de performances, on souhaite optimiser
   le type des variables de l'objet \texttt{eec}. En effet, R manipule
@@ -7821,16 +7830,17 @@ statistiques}{Cas pratique 3.4 Effectuer des manipulations complexes sur des don
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Créez la table \texttt{eec7} dans lequel toutes les variables de
     type caractère de \texttt{eec} à l'exception de ident et noi sont
     converties en variables de type numérique.\index{\texttt{lapply}}
 
     \ifsol 
-     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7879,107 +7889,111 @@ statistiques}{Cas pratique 3.4 Effectuer des manipulations complexes sur des don
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Pour chaque variable numérique de \texttt{eec7}, testez si la
     conversion en nombre entier (grâce à la fonction
     \texttt{as.integer()}) est sans perte. Quand c'est le cas,
     convertissez la variable en nombre
     entier.\index{\texttt{as.integer}|textbf}\index{\texttt{is.numeric}}\index{\texttt{identical}}\index{\texttt{function}}\index{\texttt{object\_size}|textbf}\index{\texttt{microbenchmark}}
-  \end{enumerate}
+
+    \ifsol 
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# On procède de façon analogue à précédemment : }
+
+\CommentTok{# 1) Identification des variables numériques avec un sapply()}
+\NormalTok{varNum <-}\StringTok{ }\KeywordTok{sapply}\NormalTok{(eec7, is.numeric)}
+
+\CommentTok{# 2) Pour déterminer si la conversion en entier est sans perte, }
+\CommentTok{# on teste l'identité par double-conversion. Par exemple : }
+\KeywordTok{identical}\NormalTok{(eec7}\OperatorTok{$}\NormalTok{acteu, }\KeywordTok{as.numeric}\NormalTok{(}\KeywordTok{as.integer}\NormalTok{(eec7}\OperatorTok{$}\NormalTok{acteu)))}
+\NormalTok{  ## [1] TRUE}
+
+\CommentTok{# 3) On définit alors la fonction convertirSiSansPerte() : }
+\NormalTok{convertirSiSansPerte <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{}
+  \ControlFlowTok{if}\NormalTok{(}\KeywordTok{identical}\NormalTok{(x, }\KeywordTok{as.numeric}\NormalTok{(}\KeywordTok{as.integer}\NormalTok{(x))))\{}
+    \KeywordTok{as.integer}\NormalTok{(x)}
+\NormalTok{  \}}\ControlFlowTok{else}\NormalTok{\{}
+\NormalTok{    x}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\CommentTok{# 4) Il ne reste plus qu'à appliquer cette fonction}
+\CommentTok{# à toutes les variables numériques de eec7 via un lapply()}
+\NormalTok{eec7[varNum] <-}\StringTok{ }\KeywordTok{lapply}\NormalTok{(eec7[varNum], convertirSiSansPerte)}
+\KeywordTok{str}\NormalTok{(eec7)}
+\NormalTok{  ## 'data.frame':  34913 obs. of  23 variables:}
+\NormalTok{  ##  $ ident    : chr  "G0A56JP6" "G0A56JP6" "G0A56JR6" "G0A56JS6" ...}
+\NormalTok{  ##  $ trim     : int  4 4 4 4 4 4 4 4 4 4 ...}
+\NormalTok{  ##  $ noi      : chr  "01" "02" "01" "01" ...}
+\NormalTok{  ##  $ reg      : int  11 11 11 11 11 11 11 11 11 11 ...}
+\NormalTok{  ##  $ age      : int  66 29 27 29 31 24 27 25 35 31 ...}
+\NormalTok{  ##  $ sexe     : int  2 1 2 2 1 2 1 2 1 2 ...}
+\NormalTok{  ##  $ cse      : int  56 81 38 37 37 NA 46 37 37 38 ...}
+\NormalTok{  ##  $ dip11    : int  71 42 10 11 11 10 10 10 11 11 ...}
+\NormalTok{  ##  $ acteu    : int  1 2 1 1 1 3 1 1 1 1 ...}
+\NormalTok{  ##  $ salred   : int  596 NA 2700 2666 11967 NA 2000 2800 2333 2492 ...}
+\NormalTok{  ##  $ stc      : int  2 NA 2 2 2 NA 2 2 2 2 ...}
+\NormalTok{  ##  $ tam1d    : int  NA NA NA NA NA NA NA NA NA NA ...}
+\NormalTok{  ##  $ aidref   : int  NA 5 NA NA NA 5 NA NA NA NA ...}
+\NormalTok{  ##  $ tpp      : int  1 NA 1 1 1 NA 1 1 1 1 ...}
+\NormalTok{  ##  $ nbagenf  : int  0 0 0 0 0 0 0 0 0 0 ...}
+\NormalTok{  ##  $ duhab    : int  7 NA 7 7 7 NA 6 7 7 7 ...}
+\NormalTok{  ##  $ pub3fp   : int  4 NA 4 4 4 NA 4 4 4 4 ...}
+\NormalTok{  ##  $ naia     : int  1946 1983 1985 1983 1981 1988 1985 1987 1977 1981 ...}
+\NormalTok{  ##  $ extri1613: num  1777 1777 2045 1898 1754 ...}
+\NormalTok{  ##  $ cs       : int  5 8 3 3 3 NA 4 3 3 3 ...}
+\NormalTok{  ##  $ cs2      : int  5 8 3 3 3 NA 4 3 3 3 ...}
+\NormalTok{  ##  $ acteu_red: int  1 2 1 1 1 3 1 1 1 1 ...}
+\NormalTok{  ##  $ newpond  : num  1777 1777 2045 1898 1754 ...}
+
+\CommentTok{# Quelques comparaisons}
+
+\CommentTok{# - taille des objets avec le package pryr}
+\CommentTok{# install.packages("pryr")}
+\KeywordTok{library}\NormalTok{(pryr)}
+\KeywordTok{object_size}\NormalTok{(eec)}
+\NormalTok{  ## 7.65 MB}
+\KeywordTok{object_size}\NormalTok{(eec7)}
+\NormalTok{  ## 5.12 MB}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# - vitesse d'exécution avec microbenchmark()}
+\CommentTok{# install.packages("microbenchmark")}
+\KeywordTok{library}\NormalTok{(microbenchmark)}
+\KeywordTok{microbenchmark}\NormalTok{(}\DataTypeTok{times =} \DecValTok{1000}
+\NormalTok{  , }\DataTypeTok{eec =} \KeywordTok{sum}\NormalTok{(eec}\OperatorTok{$}\NormalTok{acteu }\OperatorTok{==}\StringTok{ "2"}\NormalTok{, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{  , }\DataTypeTok{eec7 =} \KeywordTok{sum}\NormalTok{(eec7}\OperatorTok{$}\NormalTok{acteu }\OperatorTok{==}\StringTok{ }\DecValTok{2}\NormalTok{, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{verbatim}
- \ifsol 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-
- ```r
- # On procède de façon analogue à précédemment : 
-
- # 1) Identification des variables numériques avec un sapply()
- varNum <- sapply(eec7, is.numeric)
-
- # 2) Pour déterminer si la conversion en entier est sans perte, 
- # on teste l'identité par double-conversion. Par exemple : 
- identical(eec7$acteu, as.numeric(as.integer(eec7$acteu)))
-   ## [1] TRUE
-
- # 3) On définit alors la fonction convertirSiSansPerte() : 
- convertirSiSansPerte <- function(x){
-   if(identical(x, as.numeric(as.integer(x)))){
-     as.integer(x)
-   }else{
-     x
-   }
- }
-
- # 4) Il ne reste plus qu'à appliquer cette fonction
- # à toutes les variables numériques de eec7 via un lapply()
- eec7[varNum] <- lapply(eec7[varNum], convertirSiSansPerte)
- str(eec7)
-   ## 'data.frame':  34913 obs. of  23 variables:
-   ##  $ ident    : chr  "G0A56JP6" "G0A56JP6" "G0A56JR6" "G0A56JS6" ...
-   ##  $ trim     : int  4 4 4 4 4 4 4 4 4 4 ...
-   ##  $ noi      : chr  "01" "02" "01" "01" ...
-   ##  $ reg      : int  11 11 11 11 11 11 11 11 11 11 ...
-   ##  $ age      : int  66 29 27 29 31 24 27 25 35 31 ...
-   ##  $ sexe     : int  2 1 2 2 1 2 1 2 1 2 ...
-   ##  $ cse      : int  56 81 38 37 37 NA 46 37 37 38 ...
-   ##  $ dip11    : int  71 42 10 11 11 10 10 10 11 11 ...
-   ##  $ acteu    : int  1 2 1 1 1 3 1 1 1 1 ...
-   ##  $ salred   : int  596 NA 2700 2666 11967 NA 2000 2800 2333 2492 ...
-   ##  $ stc      : int  2 NA 2 2 2 NA 2 2 2 2 ...
-   ##  $ tam1d    : int  NA NA NA NA NA NA NA NA NA NA ...
-   ##  $ aidref   : int  NA 5 NA NA NA 5 NA NA NA NA ...
-   ##  $ tpp      : int  1 NA 1 1 1 NA 1 1 1 1 ...
-   ##  $ nbagenf  : int  0 0 0 0 0 0 0 0 0 0 ...
-   ##  $ duhab    : int  7 NA 7 7 7 NA 6 7 7 7 ...
-   ##  $ pub3fp   : int  4 NA 4 4 4 NA 4 4 4 4 ...
-   ##  $ naia     : int  1946 1983 1985 1983 1981 1988 1985 1987 1977 1981 ...
-   ##  $ extri1613: num  1777 1777 2045 1898 1754 ...
-   ##  $ cs       : int  5 8 3 3 3 NA 4 3 3 3 ...
-   ##  $ cs2      : int  5 8 3 3 3 NA 4 3 3 3 ...
-   ##  $ acteu_red: int  1 2 1 1 1 3 1 1 1 1 ...
-   ##  $ newpond  : num  1777 1777 2045 1898 1754 ...
-
- # Quelques comparaisons
-
- # - taille des objets avec le package pryr
- # install.packages("pryr")
- library(pryr)
- object_size(eec)
-   ## 7.5 MB
- object_size(eec7)
-   ## 4.97 MB
- ```
-
- ```r
- # - vitesse d'exécution avec microbenchmark()
- # install.packages("microbenchmark")
- library(microbenchmark)
- microbenchmark(times = 1000
-   , eec = sum(eec$acteu == "2", na.rm = TRUE)
-   , eec7 = sum(eec7$acteu == 2, na.rm = TRUE)
- )
- ```
-
- ```
-   ## Unit: microseconds
-   ##  expr     min      lq     mean   median      uq       max neval
-   ##   eec 253.809 258.151 298.4244 265.6505 303.939  4785.649  1000
-   ##  eec7 287.361 299.597 425.0637 304.7290 428.277 11225.591  1000
- ```
-
-   \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-  \bigskip 
-  \fi 
+  ## Unit: microseconds
+  ##  expr     min       lq     mean   median       uq      max neval
+  ##   eec 203.502 208.7205 265.0676 248.4545 267.4715 5487.441  1000
+  ##  eec7 112.367 115.0225 180.0998 156.8410 160.2815 9191.569  1000
 \end{verbatim}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
+  \end{enumerate}
 \end{enumerate}
 
 ~
 
-\#\#Calculer des statistiques descriptives
+\section{Calculer des statistiques
+descriptives}\label{calculer-des-statistiques-descriptives}
 
 La plupart des fonctions permettant de calculer des statistiques
 descriptives ont été présentées tout au long de la formation :
@@ -7992,7 +8006,7 @@ pondérées}.
 pratique sur les données de l'enquête Pisa 2012} (\emph{cf.} dernière
 sous-partie).
 
-\#\#\#Variables qualitatives
+\subsection{Variables qualitatives}\label{variables-qualitatives}
 
 La fonction \texttt{table()}\index{\texttt{table}|textbf} calcule les
 \textbf{fréquences} (non-pondérées) des modalités ou des croisements de
@@ -8317,7 +8331,7 @@ l'interprétation d'un tri croisé et l'utilisation de pondérations.
 \end{Highlighting}
 \end{Shaded}
 
-\#\#\#Variables quantitatives
+\subsection{Variables quantitatives}\label{variables-quantitatives}
 
 Contrairement à d'autres logiciels statistiques (SAS tout
 particulièrement), \textbf{R ne possède pas une procédure permettant de
@@ -8456,7 +8470,7 @@ qui comportent un argument \texttt{weights}.
 \end{Highlighting}
 \end{Shaded}
 
-\#\#\#Graphiques
+\subsection{Graphiques}\label{graphiques}
 
 La production de graphiques est relativement simple dans R : dans la
 plupart des cas, \textbf{c'est la fonction \texttt{plot()} qu'il
@@ -8685,7 +8699,8 @@ permettent d'effectuer des représentations spécifiques dans R :
   \begin{center}\includegraphics[width=12cm]{livret_files/figure-latex/unnamed-chunk-443-2} \end{center}
 \end{itemize}
 
-\#\#\#Application à l'enquête Pisa 2012
+\subsection{Application à l'enquête Pisa
+2012}\label{application-a-lenquete-pisa-2012}
 
 L'enquête Pisa (\textit{Program for International Student Assessment})
 est une enquête réalisée \textbf{tous les trois ans} par l'Organisation
@@ -8723,108 +8738,108 @@ Ces deux fichiers ont été \textbf{restreints à la France} et à un
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-\begin{minipage}[b]{0.38\columnwidth}\raggedright
+\begin{minipage}[b]{0.38\columnwidth}\raggedright\strut
 \textbf{Variable}\strut
-\end{minipage} & \begin{minipage}[b]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.55\columnwidth}\raggedright\strut
 \textbf{Description}\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 cnt\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Pays\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 stidstd\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Identifiant de l'élève\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 schoolid\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Identifiant de l'établissement\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 w\_fstuwt\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Poids de sondage final de l'élève\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 st01q01\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Classe en nombre d'années depuis l'entrée en primaire: la 10\(^{ème}\)
 classe correspond à la seconde en France.\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 st04q01\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Sexe : (1) Femme (2) Homme\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 st05q01\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 A suivi une scolarité pré-primaire (1) Non (2) Oui, un an ou moins (3)
 Oui, plus d'un an\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 st07q01~st07q02~st07q03\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 A redoublé à un moment de sa scolarité : (1) Non (2-3) Oui, une ou
 plusieurs fois\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 st08q01\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Est arrivé en retard au cours des deux semaines précédant
 l'enquête\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 st09q01\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 A séché les cours au cours des deux semaines précédant l'enquête\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 anxmat\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Score synthétique d'anxiété en mathématiques\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 disclima\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Score synthétique de climat de discipline dans la classe\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 escs\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Indicateur synthétique de statut économique, social et culturel\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 immig\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Immigration : (1) Né en France (2) Immigré de deuxième génération (3)
 Immigré de première génération\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 hisced\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Niveau d'étude le plus élevé des parents
 (\href{http://www.uis.unesco.org/Education/Documents/isced-2011-fr.pdf}{nomenclature
 CITE})\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 pv1math\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Score synthétique à l'évaluation de mathématiques\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 pv1read\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Score synthétique à l'évaluation de compréhension de l'écrit\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 pv1scie\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Score synthétique à l'évaluation de sciences\strut
 \end{minipage}\tabularnewline
 \bottomrule
@@ -8834,43 +8849,43 @@ Score synthétique à l'évaluation de sciences\strut
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-\begin{minipage}[b]{0.38\columnwidth}\raggedright
+\begin{minipage}[b]{0.38\columnwidth}\raggedright\strut
 \textbf{Variable}\strut
-\end{minipage} & \begin{minipage}[b]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.55\columnwidth}\raggedright\strut
 \textbf{Description}\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 cnt\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Pays\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 schoolid\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Identifiant de l'établissement\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 senwgt\_scq\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Poids de sondage (la somme vaut 1~000 dans chaque pays)\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 sc01q01\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Statut public ou privé (1) public (2) privé\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 sc03q01\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Taille de la commune de l'établissement : (1) \emph{Village} (2)
 \emph{Small town} (3) \emph{Town} (4) \emph{City} (5) \emph{Large
 city}\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.38\columnwidth}\raggedright
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
 sc05q01\strut
-\end{minipage} & \begin{minipage}[t]{0.56\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
 Taille de la classe en cours de français : (01) 15 ou moins (02) 16-20
 (03) 21-25 \ldots{} (08) 46-50 (09) Plus de 50 élèves\strut
 \end{minipage}\tabularnewline
@@ -8879,10 +8894,9 @@ Taille de la classe en cours de français : (01) 15 ou moins (02) 16-20
 
 ~
 
-\hypertarget{cas-pratique-3.5-application-a-lenquete-pisa-2012-importation-et-mise-en-forme-des-donnees}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 3.5} Application à
 l'enquête Pisa 2012 : Importation et mise en forme des
-données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et mise en forme des données}}\label{cas-pratique-3.5-application-a-lenquete-pisa-2012-importation-et-mise-en-forme-des-donnees}}
+données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et mise en forme des données}}\label{cas-pratique-3.5-application-a-lenquete-pisa-2012-importation-et-mise-en-forme-des-donnees}
 
 \addcontentsline{cp}{caspratique}{3.5 Application à l'enquête Pisa 2012 : Importation et mise en forme des données}
 
@@ -8914,9 +8928,9 @@ données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et 
 \end{Highlighting}
 \end{Shaded}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   On souhaite pouvoir utiliser les informations au niveau de
   l'établissement dans des exploitations au niveau des élèves. Pour ce
@@ -8955,9 +8969,9 @@ données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et 
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Vérifiez que la variable \texttt{schoolid} est un identifiant pour
     la table \texttt{sch}, à savoir : (1) qu'elle est renseignée pour
@@ -8965,7 +8979,8 @@ données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et 
     ligne.
 
     \ifsol 
-     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -8980,9 +8995,9 @@ données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et 
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Utilisez la fonction \texttt{merge()}\index{\texttt{merge}} pour
     fusionner \texttt{stu} et \texttt{sch} par \texttt{schoolid} et
@@ -8990,27 +9005,28 @@ données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et 
     cohérentes avec le résultat des questions précédentes : même nombre
     de lignes que \texttt{stu}, nombre de colonnes égal à celui de
     \texttt{stu} et de \texttt{sch} moins 1.
+
+    \ifsol 
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Fusion des deux tables}
+\NormalTok{stu2 <-}\StringTok{ }\KeywordTok{merge}\NormalTok{(stu, sch, }\DataTypeTok{by =} \StringTok{"schoolid"}\NormalTok{)}
+
+\CommentTok{# Vérifications }
+\KeywordTok{nrow}\NormalTok{(stu2) }\OperatorTok{==}\StringTok{ }\KeywordTok{nrow}\NormalTok{(stu)}
+\NormalTok{  ## [1] TRUE}
+\KeywordTok{ncol}\NormalTok{(stu2) }\OperatorTok{==}\StringTok{ }\KeywordTok{ncol}\NormalTok{(stu) }\OperatorTok{+}\StringTok{ }\KeywordTok{ncol}\NormalTok{(sch) }\OperatorTok{-}\StringTok{ }\DecValTok{1}
+\NormalTok{  ## [1] TRUE}
+\end{Highlighting}
+\end{Shaded}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \end{enumerate}
-
-\begin{verbatim}
- \ifsol 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-
- ```r
- # Fusion des deux tables
- stu2 <- merge(stu, sch, by = "schoolid")
-
- # Vérifications 
- nrow(stu2) == nrow(stu)
-   ## [1] TRUE
- ncol(stu2) == ncol(stu) + ncol(sch) - 1
-   ## [1] TRUE
- ```
-
-   \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-  \bigskip 
-  \fi 
-\end{verbatim}
 \item
   Recodage de variables
 
@@ -9032,9 +9048,9 @@ données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et 
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-      \bigskip 
-      \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Un élève a redoublé à un moment dans sa scolarité dès lors qu'une
     des variables \texttt{st07q01}, \texttt{st07q02} ou \texttt{st07q03}
@@ -9043,7 +9059,8 @@ données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et 
     scolarité.
 
     \ifsol 
-     \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -9060,53 +9077,53 @@ données}{Cas pratique 3.5 Application à l'enquête Pisa 2012 : Importation et 
 \end{Highlighting}
 \end{Shaded}
 
-    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-     \bigskip 
-     \fi
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \item
     Quelle est la nature de l'indicateur synthétique de statut
     économique, social et culturel ? Recodez-le sous la forme d'une
     variable qualitative à 5 modalités (en utilisant les fonctions
     \texttt{cut()}\index{\texttt{cut}|textbf} et
     \texttt{quantile()}\index{\texttt{quantile}}).
+
+    \ifsol 
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# La variable escs est de nature quantitative, ce qui n'est pas très naturel}
+\KeywordTok{summary}\NormalTok{(stu2}\OperatorTok{$}\NormalTok{escs)}
+\NormalTok{  ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's }
+\NormalTok{  ## -3.46000 -0.60000  0.04000 -0.02122  0.60000  2.20000      124}
+
+\CommentTok{# On la recode en une variable qualitative selon ses quintiles}
+\CommentTok{# pour facilier les interprétations}
+\NormalTok{stu2}\OperatorTok{$}\NormalTok{escsq <-}\StringTok{  }\KeywordTok{cut}\NormalTok{(}
+\NormalTok{  stu2}\OperatorTok{$}\NormalTok{escs}
+\NormalTok{  , }\KeywordTok{quantile}\NormalTok{(stu2}\OperatorTok{$}\NormalTok{escs, }\DataTypeTok{probs =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\FloatTok{0.20}\NormalTok{, }\FloatTok{0.40}\NormalTok{, }\FloatTok{0.60}\NormalTok{, }\FloatTok{0.80}\NormalTok{, }\DecValTok{1}\NormalTok{), }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{)}
+\KeywordTok{table}\NormalTok{(stu2}\OperatorTok{$}\NormalTok{escsq)}
+\NormalTok{  ## }
+\NormalTok{  ## (-3.46,-0.74] (-0.74,-0.21]  (-0.21,0.25]   (0.25,0.72] }
+\NormalTok{  ##           902           896           896           905 }
+\NormalTok{  ##    (0.72,2.2] }
+\NormalTok{  ##           889}
+\end{Highlighting}
+\end{Shaded}
+
+    \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+    \bigskip  \fi 
   \end{enumerate}
-
-\begin{verbatim}
- \ifsol 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-
- ```r
- # La variable escs est de nature quantitative, ce qui n'est pas très naturel
- summary(stu2$escs)
-   ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's 
-   ## -3.46000 -0.60000  0.04000 -0.02122  0.60000  2.20000      124
-
- # On la recode en une variable qualitative selon ses quintiles
- # pour facilier les interprétations
- stu2$escsq <-  cut(
-   stu2$escs
-   , quantile(stu2$escs, probs = c(0, 0.20, 0.40, 0.60, 0.80, 1), na.rm = TRUE)
- )
- table(stu2$escsq)
-   ## 
-   ## (-3.46,-0.74] (-0.74,-0.21]  (-0.21,0.25]   (0.25,0.72] 
-   ##           902           896           896           905 
-   ##    (0.72,2.2] 
-   ##           889
- ```
-
-   \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-  \bigskip 
-  \fi 
-\end{verbatim}
 \end{enumerate}
 
 ~
 
-\hypertarget{cas-pratique-3.6-application-a-lenquete-pisa-2012-statistiques-descriptives}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 3.6} Application à
 l'enquête Pisa 2012 : Statistiques
-descriptives}{Cas pratique 3.6 Application à l'enquête Pisa 2012 : Statistiques descriptives}}\label{cas-pratique-3.6-application-a-lenquete-pisa-2012-statistiques-descriptives}}
+descriptives}{Cas pratique 3.6 Application à l'enquête Pisa 2012 : Statistiques descriptives}}\label{cas-pratique-3.6-application-a-lenquete-pisa-2012-statistiques-descriptives}
 
 \addcontentsline{cp}{caspratique}{3.6 Application à l'enquête Pisa 2012 : Statistiques descriptives}
 
@@ -9181,9 +9198,9 @@ descriptives}{Cas pratique 3.6 Application à l'enquête Pisa 2012 : Statistique
   l'hypothèse nulle d'indépendance entre les variables de sexe et de
   reoublement au seuil de 1~\%.
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Calculez le coefficient de corrélation linéaire de Pearson entre notes
   en mathématiques et en sciences et menez le test de nullité de ce
@@ -9217,9 +9234,9 @@ descriptives}{Cas pratique 3.6 Application à l'enquête Pisa 2012 : Statistique
   possible de rejeter au seuil de 1~\% l'hypothèse que ces deux scores
   ne soient pas corrélés.
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Calculez le score moyen en mathématiques selon les quintiles de statut
   économique, social et culturel (\emph{cf.} le recodage du cas pratique
@@ -9242,17 +9259,16 @@ descriptives}{Cas pratique 3.6 Application à l'enquête Pisa 2012 : Statistique
   La moyenne du score en mathématiques est d'autant plus élevée que le
   statut économique, social et culturel est favorisé.
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \end{enumerate}
 
 ~
 
-\hypertarget{cas-pratique-3.7-application-a-lenquete-pisa-2012-graphiques}{%
 \subsubsection{\texorpdfstring{\textbf{Cas pratique 3.7} Application à
 l'enquête Pisa 2012 :
-Graphiques}{Cas pratique 3.7 Application à l'enquête Pisa 2012 : Graphiques}}\label{cas-pratique-3.7-application-a-lenquete-pisa-2012-graphiques}}
+Graphiques}{Cas pratique 3.7 Application à l'enquête Pisa 2012 : Graphiques}}\label{cas-pratique-3.7-application-a-lenquete-pisa-2012-graphiques}
 
 \addcontentsline{cp}{caspratique}{3.7 Application à l'enquête Pisa 2012 : Graphiques}
 
@@ -9285,9 +9301,9 @@ Graphiques}{Cas pratique 3.7 Application à l'enquête Pisa 2012 : Graphiques}}\
 
   \begin{center}\includegraphics[width=12cm]{livret_files/figure-latex/unnamed-chunk-479-1} \end{center}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Utilisez la fonction \texttt{plot()} pour représenter le nuage de
   points de la relation entre le score en mathématiques et le score en
@@ -9311,9 +9327,9 @@ Graphiques}{Cas pratique 3.7 Application à l'enquête Pisa 2012 : Graphiques}}\
 
   \begin{center}\includegraphics[width=12cm]{livret_files/figure-latex/unnamed-chunk-482-1} \end{center}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Construisez la \enquote{boîte à moustaches} représentant la relation
   entre stat au moinst économique, social et culturel (en quintiles) et
@@ -9337,9 +9353,9 @@ Graphiques}{Cas pratique 3.7 Application à l'enquête Pisa 2012 : Graphiques}}\
 
   \begin{center}\includegraphics[width=12cm]{livret_files/figure-latex/unnamed-chunk-485-1} \end{center}
 
-  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center} 
-    \bigskip 
-    \fi
+  \begin{center} \rule{0.5\linewidth}{\linethickness}\end{center}
+
+  \bigskip  \fi 
 \item
   Utilisez les fonctionnalités de RStudio (menus déroulants de la
   fenêtre de graphiques) pour sauvegarder ces graphiques dans la qualité
@@ -9348,9 +9364,11 @@ Graphiques}{Cas pratique 3.7 Application à l'enquête Pisa 2012 : Graphiques}}\
 
 ~
 
-\#\#Quelques liens pour aller plus loin
+\section{Quelques liens pour aller plus
+loin}\label{quelques-liens-pour-aller-plus-loin}
 
-\#\#\#Formation R perfectionnement
+\subsection{Formation R
+perfectionnement}\label{formation-r-perfectionnement}
 
 Le support de la formation R perfectionnement est en ligne à l'adresse :
 \href{http://teaching.slmc.fr/perf}{t.slmc.fr/perf}. Elle aborde trois
@@ -9375,7 +9393,8 @@ Division Formation : certaines portent sensiblement sur les mêmes
 sujets, mais pas toutes (notamment une consacrée à
 \href{https://shiny.rstudio.com/}{R Shiny}).
 
-\#\#\#Utiliser des techniques d'analyse de données multidimensionnelles
+\subsection{Utiliser des techniques d'analyse de données
+multidimensionnelles}\label{utiliser-des-techniques-danalyse-de-donnees-multidimensionnelles}
 
 Le package \texttt{FactoMineR} (attention à la casse !) rend extrêmement
 simple la mise en oeuvre sous R de \textbf{techniques d'analyse de
@@ -9388,7 +9407,8 @@ Ce
 d'introduction} (\enquote{vignette} dans la terminologie de R) présente
 ces méthodes et leur mise en oeuvre avec \texttt{FactoMineR}.
 
-\#\#\#Estimer des modèles de régression
+\subsection{Estimer des modèles de
+régression}\label{estimer-des-modeles-de-regression}
 
 Les fonctions natives de R \texttt{lm()} et \texttt{glm()} permettent
 respectivement d'estimer des \textbf{modèles linéaires et linéaires
