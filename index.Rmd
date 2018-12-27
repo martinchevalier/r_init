@@ -1,20 +1,22 @@
+--- 
+title: "Formation R Initiation"
+author: "Martin Chevalier"
+date: "`r Sys.Date()`"
+knit: "bookdown::render_book"
+site: bookdown::bookdown_site
+documentclass: book
+classoption: twosided, notitlepage
+fontsize: 12pt
+geometry: top=2.5cm, bottom=2.5cm, inner=3.5cm, outer=2.5cm
+---
 
-#--------------------------------------------
-# Variables globales
-#--------------------------------------------
-
-if(!exists(".download")) .download <- FALSE
-if(!exists(".sol")) .sol <- FALSE
-
+```{r setup, include=FALSE}
+.download <- FALSE
+.sol <- FALSE
 knitr::opts_chunk$set(comment = "  ##", collapse = TRUE, fig.path = "../figures/")
-options(scipen = 10, stringsAsFactors = TRUE)
-options(repos = "https://cran.rstudio.com/")
+options(scipen = 10, stringsAsFactors = TRUE, repos = "https://cran.rstudio.com/")
 
-
-#--------------------------------------------
-# Téléchargement des données et espace de travail
-#--------------------------------------------
-
+# Récupération des données 
 if(.download){
   file <- tempfile()
   download.file("http://r.slmc.fr/donnees.zip", file)
@@ -23,56 +25,43 @@ if(.download){
 unzip(file, exdir = .dir)
 knitr::opts_knit$set(root.dir = .dir)
 
-#--------------------------------------------
-# Chargement des packages
-#--------------------------------------------
+# Chargement des packages (après installation éventuelle)
+lapply(c("foreign", "haven", "data.table", "descr", "moments", "Hmisc", "pryr", "microbenchmark"), function(pkg) {
+  if (system.file(package = pkg) == "") install.packages(pkg)
+  library(pkg, character.only = TRUE)
+})
 
-library(foreign)
-library(haven)
-library(data.table)
-library(descr)
-library(moments)
-library(Hmisc)
-library(pryr)
-library(microbenchmark)
 
-#--------------------------------------------
-# Sectionnement des documents
-#--------------------------------------------
+### Sections ----
 
-.init <- function(){
-  set.seed(1)
-  .numHide <<- 0
-  .numQuestion <<- 0
-  .html <<- knitr::opts_knit$get("rmarkdown.pandoc.to") == "html"
-  .pdf <<- knitr::opts_knit$get("rmarkdown.pandoc.to") == "latex"
-  options(stringsAsFactors = TRUE)
-}
+set.seed(1)
+.numHide <- 0
+.numQuestion <- 0
+.html <<- knitr::opts_knit$get("rmarkdown.pandoc.to") == "html"
+.pdf <<- knitr::opts_knit$get("rmarkdown.pandoc.to") == "latex"
 
 .module <- function(numModule, text){
   .numModule <<- numModule
-  if(.html) cat("\n \\ \n")
-  if(.pdf){
-    if(.numModule > 1) cat("\\addtocontents{cp}{\\vspace{\\normalbaselineskip}}")
-    cat("\\chapter{", text, "}", sep = "")
-    cat("\n \\minitoc \n")
-  }
+  if(.html) cat("#", text, sep = "")
+  if(.pdf) cat("#", text, sep = "")
+  # if(.pdf){
+  #   if(.numModule > 1) cat("\\addtocontents{cp}{\\vspace{\\normalbaselineskip}}")
+  #   cat("\\chapter{", text, "}", sep = "")
+  #   cat("\n \\minitoc \n")
+  # }
 }
 
 .partie <- function(text){
-  cat("\n"); cat("\\ \n"); cat("\n");
-  if(.html) cat("#", text, sep = "")
+  if(.html) cat("##", text, sep = "")
   if(.pdf) cat("##", text, "", sep = "")
 }
 
 .souspartie <- function(text){
-  if(.html) cat("##", text, sep = "")
+  if(.html) cat("###", text, sep = "")
   if(.pdf) cat("###", text, sep = "")
 }
 
-#--------------------------------------------
-# Fonctions outils
-#--------------------------------------------
+### Fonctions outils ----
 
 # Arrondis
 .f <- function(x, digits = 2){
@@ -144,8 +133,35 @@ library(microbenchmark)
   }
 }
 
-#--------------------------------------------
-# Validation de l'initialisation
-#--------------------------------------------
+```
 
-.initOK <- TRUE
+# Introduction {-}
+
+Cette page rassemble les supports de la formation R initiation des 22 et 23 janvier 2018 :
+
+- [Module 1 Prise en main du logiciel (.html)](module1.html)
+
+- [Module 2 Manipuler les outils fondamentaux du langage (.html)](module2.html)
+
+- [Module 3 Travailler avec des données statistiques (.html)](module3.html)
+
+- [Données utilisées pour les cas pratiques (.zip, 3,6 Mo)](donnees.zip)
+
+- [Support de formation en format imprimable (.pdf)](livret.pdf)
+
+- [Support de formation en format imprimable et avec solutions (.pdf)](livret_sol.pdf)
+
+- [Support de présentation utilisé lors de la formation (.pdf)](presentation.pdf)
+
+
+**Note** Les pages html peuvent être téléchargées sous forme de fichiers .html autonomes et consultées hors connexion.
+
+\ 
+
+Les supports de cette formation ont été conçus sous RStudio avec [R Markdown](http://rmarkdown.rstudio.com/) et compilés le `r format(Sys.Date(), format="%d/%m/%Y")`. Certains éléments de mise en forme du site compagnon sont repris de l'ouvrage [R packages](http://r-pkgs.had.co.nz/) de Hadley Wickham. 
+  
+Ces supports seront durablement disponibles à l'adresse [http://   r.slmc.fr](http://r.slmc.fr/) et leur code source sur [github](https://github.com/martinchevalier/r_insee). L'ensemble est librement réutilisable sous &copy;\ 2016-2018 Martin Chevalier [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/fr).
+
+\ 
+
+[Retour à la page d'accueil](..)

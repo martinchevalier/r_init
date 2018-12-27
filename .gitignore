@@ -6,3 +6,5 @@
 *_cache
 *.knit.md
 *.utf8.md
+*.svg
+_temp/

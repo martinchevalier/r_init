@@ -1,13 +1,3 @@
----
-title: "Module 2 Manipuler les éléments fondamentaux du langage"
----
-
-```{r, include = FALSE}
-rm(list = ls())
-if(!exists(".initOK")) source("init.R", encoding = "latin1")
-.init()
-```
-
 ```{r, results = "asis", echo = FALSE}
 .module(numModule = 2, "Manipuler les éléments fondamentaux du langage")
 ```

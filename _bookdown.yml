@@ -1,0 +1,9 @@
+book_filename: r_init
+rmd_files:
+  html: ["index.Rmd", "01-prise-en-main.Rmd", "02-fondamentaux.Rmd", "03-mise-en-pratique.Rmd"]
+  latex: ["index.Rmd", "01-prise-en-main.Rmd", "02-fondamentaux.Rmd", "03-mise-en-pratique.Rmd"]
+output_dir: _temp
+language:
+  ui:
+    chapter_name: "Module "
+delete_merged_file: true

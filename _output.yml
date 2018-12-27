@@ -1,0 +1,22 @@
+bookdown::gitbook:
+  css: style.css
+  dev: svglite
+  split_by: section
+  highlight: haddock
+  includes:
+    in_header: header.html
+  config:
+    toc:
+      before: |
+        <li><a href="."><b>Formation R initiation</b></a></li>
+    download: ["pdf"]
+    sharing: no
+bookdown::pdf_book:
+  highlight: haddock
+  dev: "cairo_pdf"
+  includes:
+    in_header: header.tex
+  latex_engine: pdflatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
