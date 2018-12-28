@@ -1,7 +1,7 @@
 --- 
-title: "Formation R Initiation"
-author: "Martin Chevalier"
-date: "`r Sys.Date()`"
+title: "**Formation R Initiation**"
+author: "Martin Chevalier (Insee)"
+date: "Version du `r format(Sys.Date(), '%d/%m/%Y')`"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 documentclass: book
@@ -12,7 +12,7 @@ geometry: top=2.5cm, bottom=2.5cm, inner=3.5cm, outer=2.5cm
 
 ```{r setup, include=FALSE}
 .download <- FALSE
-.sol <- FALSE
+.sol <- TRUE
 knitr::opts_chunk$set(comment = "  ##", collapse = TRUE, fig.path = "../figures/")
 options(scipen = 10, stringsAsFactors = TRUE, repos = "https://cran.rstudio.com/")
 
@@ -42,8 +42,12 @@ set.seed(1)
 
 .module <- function(numModule, text){
   .numModule <<- numModule
+  .numQuestion <<- 0
   if(.html) cat("#", text, sep = "")
-  if(.pdf) cat("#", text, sep = "")
+  if(.pdf){
+    if(.numModule > 1) cat("\\addtocontents{cp}{\\vspace{\\normalbaselineskip}}")
+    cat("#", text, "\n \\minitoc \n", sep = "")
+  }
   # if(.pdf){
   #   if(.numModule > 1) cat("\\addtocontents{cp}{\\vspace{\\normalbaselineskip}}")
   #   cat("\\chapter{", text, "}", sep = "")
@@ -90,7 +94,7 @@ set.seed(1)
 .question <- function(text = NULL){
   .numQuestion <<- .numQuestion + 1
   cat("\n"); cat("\\ \n"); cat("\n");
-  cat("#### **Cas pratique ", .numModule, ".", .numQuestion, "** ", text, sep = "")
+  cat("**Cas pratique ", .numModule, ".", .numQuestion, "** ", text, sep = "")
   if(.pdf) cat(
     "\n \\addcontentsline{cp}{caspratique}{"
     , .numModule, ".", .numQuestion, " ", text
@@ -136,6 +140,13 @@ set.seed(1)
 ```
 
 # Introduction {-}
+
+```{r, results = "asis", echo = FALSE}
+# Pour éviter le décalage des minitoc en début de chapitre
+# https://texnique.fr/osqa/questions/5022/minitoc-un-chapitre-en-retard
+if(.pdf) cat("\n \\adjustmtc \n")
+```
+
 
 Cette page rassemble les supports de la formation R initiation des 22 et 23 janvier 2018 :
 

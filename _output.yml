@@ -4,7 +4,7 @@ bookdown::gitbook:
   split_by: section
   highlight: haddock
   includes:
-    in_header: header.html
+    in_header: _header.html
   config:
     toc:
       before: |
@@ -15,7 +15,8 @@ bookdown::pdf_book:
   highlight: haddock
   dev: "cairo_pdf"
   includes:
-    in_header: header.tex
+    in_header: _header.tex
+    after_body: _after_body.tex
   latex_engine: pdflatex
   citation_package: natbib
   keep_tex: yes
