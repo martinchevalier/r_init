@@ -76,17 +76,17 @@ set.seed(1)
 .fun <- function(fun, bold = FALSE){
   if(.pdf) r <- paste0("\\index{\\texttt{", fun, "}", if(bold) "|textbf" else "",  "}")
   if(.html) r <- ""
-  return(r)
+  r
 }
 
 # Fonction pour garantir la cohérence des références internes
 # entre la version web et la version imprimée
 .ref <- function(text, link_html = NULL, link_pdf = NULL){
-  if(.html & !is.null(link_html)) out <- paste0("[", text, "](", link_html, ")")
-  if(.html & is.null(link_html)) out <- paste0(text)
-  if(.pdf & !is.null(link_pdf)) out <- paste0("[\\underline{", text, "}](", link_pdf, ")")
-  if(.pdf & is.null(link_pdf)) out <- paste0("\\underline{", text, "}")
-  return(out)
+  if(.html & !is.null(link_html)) out <- paste0("<a href=\"", link_html, "\">", text, "</a>")
+  if(.html & is.null(link_html)) out <- text
+  if(.pdf & !is.null(link_pdf)) out <- paste0("\\href{", link_pdf, "}{", text, "}")
+  if(.pdf & is.null(link_pdf)) out <- text
+  cat(out)
 }
 
 
@@ -150,13 +150,26 @@ if(.pdf) cat("\n \\adjustmtc \n")
 
 Cette page rassemble les supports de la formation R initiation des 22 et 23 janvier 2018 :
 
-- [Module 1 Prise en main du logiciel (.html)](module1.html)
+- 
+```{r, results = "asis", echo = FALSE}
+.ref(text = "Module 1 : Prise en main du logiciel", link_html = "prise-en-main-du-logiciel.html")
+```
 
-- [Module 2 Manipuler les outils fondamentaux du langage (.html)](module2.html)
+- 
+```{r, results = "asis", echo = FALSE}
+.ref(text = "Module 2 : Manipuler les outils fondamentaux du langage", link_html = "manipuler-les-elements-fondamentaux-du-langage.html")
+```
 
-- [Module 3 Travailler avec des données statistiques (.html)](module3.html)
+- 
+```{r, results = "asis", echo = FALSE}
+.ref(text = "Module 3 : Travailler avec des données statistiques", link_html = "travailler-avec-des-donnees-statistiques.html")
+```
 
-- [Données utilisées pour les cas pratiques (.zip, 3,6 Mo)](donnees.zip)
+- 
+```{r, results = "asis", echo = FALSE}
+.ref(text = "Données utilisées pour les cas pratiques (.zip, 3,6 Mo)", link_html = "donnees.zip", link_pdf = "http://r.slmc.fr/donnees.zip")
+```
+
 
 - [Support de formation en format imprimable (.pdf)](livret.pdf)
 
@@ -175,4 +188,8 @@ Ces supports seront durablement disponibles à l'adresse [http://   r.slmc.fr](h
 
 \ 
 
-[Retour à la page d'accueil](..)
+
+```{r, results="asis", echo=FALSE}
+if(.html) cat("<a href=\"..\">Retour à la page d'accueil</a>")
+if(.pdf) if(.sol) cat("\\soltrue") else cat("\\solfalse")
+```
