@@ -7,30 +7,45 @@ output:
 
 \ 
 
-Cette page rassemble les supports de la formation R initiation des 22 et 23 janvier 2018 :
+Cette page rassemble les supports de la formation R initiation conçue par Martin Chevalier et donnée à l'Insee de 2016 à 2018. 
 
-- [Module 1 Prise en main du logiciel (.html)](module1.html)
+- **Support en format électronique** (fichiers .html autonomes, téléchargeables pour une utilisation hors-connexion si besoin) : 
 
-- [Module 2 Manipuler les outils fondamentaux du langage (.html)](module2.html)
+    - [Module 1 Prise en main du logiciel (.html)](module1.html)
 
-- [Module 3 Travailler avec des données statistiques (.html)](module3.html)
+    - [Module 2 Manipuler les outils fondamentaux du langage (.html)](module2.html)
 
-- [Données utilisées pour les cas pratiques (.zip, 3,6 Mo)](donnees.zip)
+    - [Module 3 Travailler avec des données statistiques (.html)](module3.html)
+    
 
-- [Support de formation en format imprimable (.pdf)](livret.pdf)
+- **Support en format imprimable** (fichiers .pdf maquettés, avec table des matières et index) : 
 
-- [Support de formation en format imprimable et avec solutions (.pdf)](livret_sol.pdf)
+    - [Support de formation en format imprimable sans solutions des exercices (.pdf)](livret.pdf)
 
-- [Support de présentation utilisé lors de la formation (.pdf)](presentation.pdf)
+    - [Support de formation en format imprimable avec solutions des exercices (.pdf)](livret_sol.pdf)
 
+- [**Données utilisées pour les exercices** (.zip, 3,6 Mo)](donnees.zip)
 
-**Note** Les pages html peuvent être téléchargées sous forme de fichiers .html autonomes et consultées hors connexion.
+- [**Support de présentation utilisé lors de la formation** (.pdf)](presentation.pdf)
 
-\ 
+<hr>
 
-Les supports de cette formation ont été conçus sous RStudio avec [R Markdown](http://rmarkdown.rstudio.com/) et compilés le `r format(Sys.Date(), format="%d/%m/%Y")`. Certains éléments de mise en forme du site compagnon sont repris de l'ouvrage [R packages](http://r-pkgs.had.co.nz/) de Hadley Wickham. 
+**Utilisation dans un environnement hors Insee** Quelques éléments du support font référence à l'infrastructure Insee ("AUS", versions de R installées, etc.), mais **cette formation peut tout à fait être suivie en auto-formation dans un environnement hors Insee** (ordinateur personnel par exemple). Pour ce faire, il convient au préalable de réaliser les opérations suivantes : 
+
+1. Télécharger et installer R : 
+    - sur Windows : https://cran.r-project.org/bin/windows/base/
+    - sur Mac OS : https://cran.r-project.org/bin/macosx/
+    - sur Linux : https://www.r-project.org/
+
+2. Télécharger et installer RStudio : https://rstudio.com/products/rstudio/download/#download  (choisir le système d'exploitation approprié).
+
+3. Télécharger les données utilisées pour les exercices de la formation et décompresser le dossier : [donnees.zip (3,6 Mo)](donnees.zip).
+
+<hr>
+
+Les supports de cette formation ont été conçus sous RStudio avec [R Markdown](http://rmarkdown.rstudio.com/). Certains éléments de mise en forme du site compagnon sont repris de l'ouvrage [R packages](http://r-pkgs.had.co.nz/) de Hadley Wickham. 
   
-Ces supports seront durablement disponibles à l'adresse [http://   r.slmc.fr](http://r.slmc.fr/) et leur code source sur [github](https://github.com/martinchevalier/r_insee). L'ensemble est librement réutilisable sous &copy;\ 2016-2018 Martin Chevalier [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/fr).
+Ces supports seront durablement disponibles à l'adresse [http://r.slmc.fr](http://r.slmc.fr/) et leur code source sur [github](https://github.com/martinchevalier/r_insee). L'ensemble est librement réutilisable sous &copy;\ 2016-2020 Martin Chevalier [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/fr).
 
 \ 
 
